@@ -1,31 +1,31 @@
-  #include "define.h"
+#include "define.h"
 
-  /* Structures qui seront utilisées pour gérer le jeu */
+/* Structures qui seront utilisées pour gérer le jeu */
 
-  /* Structure pour gérer l'input (clavier puis joystick) */
+/* Structure pour gérer l'input (clavier puis joystick) */
 
-   typedef struct Input
-  {
+typedef struct Input
+{
 
-    int left,
-        right,
-        up,
-        down,
-        jump,
-        attack,
-        enter,
-        erase,
-        pause;
+int left,
+    right,
+    up,
+    down,
+    jump,
+    attack,
+    enter,
+    erase,
+    pause;
 
-  } Input;
+} Input;
 
 
-  /* Structure pour gérer le niveau (à compléter plus tard) */
+/* Structure pour gérer le niveau (à compléter plus tard) */
 
-  typedef struct Gestion
-  {
+typedef struct Gestion
+{
 
-    SDL_Surface *screen;
+SDL_Surface *screen;
 
-  } Gestion;
+} Gestion;
 
