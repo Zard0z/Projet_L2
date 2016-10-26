@@ -10,25 +10,24 @@ void init(char *title)
 
 if (SDL_Init(SDL_INIT_VIDEO ) < 0)
 {
-    printf("Could not initialize SDL: %s\n", SDL_GetError());
+    printf("Impossible de lancer la SDL : %s\n", SDL_GetError());
     exit(1);
 }
 
 
  /* On crée la fenêtre, représentée par le pointeur jeu.screen en utilisant la largeur et la
- hauteur définies dans les defines (defs.h). On utilise aussi la mémoire vidéo
+ hauteur définies dans les defines (def.h). On utilise aussi la mémoire vidéo
  (SDL_HWPALETTE) et le double buffer pour éviter que ça scintille
  (SDL_DOUBLEBUF) */
 
-jeu.screen = SDL_SetVideoMode(SCREEN_WIDTH, SCREEN_HEIGHT, 0,
-                                                    SDL_HWPALETTE|SDL_DOUBLEBUF);
+jeu.screen = SDL_SetVideoMode(SCREEN_long, SCREEN_haut, 0, SDL_HWPALETTE|SDL_DOUBLEBUF);
 
  /* Si on y arrive pas, on quitte */
 
 if (jeu.screen == NULL)
 {
-    printf("Couldn't set screen mode to %d x %d: %s\n", SCREEN_WIDTH,
-             SCREEN_HEIGHT, SDL_GetError());
+    printf("Couldn't set screen mode to %d x %d: %s\n", SCREEN_long,
+             SCREEN_haut, SDL_GetError());
     exit(1);
 }
 

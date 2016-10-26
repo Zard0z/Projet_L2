@@ -1,3 +1,3 @@
-#include "structs.h"
+#include "struct.h"
 
 extern Input input;
