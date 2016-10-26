@@ -6,7 +6,7 @@
     int go;
 
     /* Initialisation de la SDL dans une fonction séparée (voir après) */
-        init("Aron");
+        init("H3RO");
 
    /* Appelle la fonction cleanup à la fin du programme */
          atexit(cleanup);
