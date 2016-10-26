@@ -1,38 +1,40 @@
 #include "main.h"
 
-int main( int argc, char *argv[ ] )
+int main(int argc, char *argv[ ])
 {
-unsigned int frameLimit = SDL_GetTicks() + 16;
-int go;
+    unsigned int frameLimit = SDL_GetTicks() + 16;
+    int go;
 
-/* Initialisation de la SDL dans une fonction séparée (voir après) */
-init("H3RO");
+    /* Initialisation de la SDL dans une fonction séparée (voir après) */
+    init("H3RO");
 
-/* Appelle la fonction cleanup à la fin du programme */
-atexit(cleanup);
+    /* Chargement des ressources (graphismes, sons) */
+    loadGame();
 
-go = 1;
+    /* Appelle la fonction cleanup à la fin du programme */
+    atexit(cleanup);
 
+    go = 1;
 
-/* Boucle infinie, principale, du jeu */
+    /* Boucle infinie, principale, du jeu */
 
-while (go == 1)
-{
+    while (go == 1)
+    {
 
-    /* On vérifie l'état des entrées (clavier puis plus tard joystick */
-    getInput();
+        /* On vérifie l'état des entrées (clavier puis plus tard joystick */
+        getInput();
 
-    /* On affiche tout */
-    draw();
+        /* On affiche tout */
+        draw();
 
-    /* Gestion des 60 fps ( 60 images pas seconde : soit 1s ->1000ms/60 = 16.6 -> 16
-    On doit donc attendre 16 ms entre chaque image (frame) */
-    delay(frameLimit);
-    frameLimit = SDL_GetTicks() + 16;
+        /* Gestion des 60 fps ( 60 images pas seconde : soit 1s ->1000ms/60 = 16.6 -> 16
+        On doit donc attendre 16 ms entre chaque image (frame) */
+        delay(frameLimit);
+        frameLimit = SDL_GetTicks() + 16;
 
-}
+    }
 
-/* Exit */
-exit(0);
+    /* Exit */
+    exit(0);
 
 }

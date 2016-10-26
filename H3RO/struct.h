@@ -29,10 +29,10 @@ typedef struct Operate
 
 } Operate;
 
-typedef struct Map
+typedef struct Depth
 {
 
     SDL_Surface *background;
 
-} Map;
+} Depth;
 
