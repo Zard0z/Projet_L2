@@ -22,10 +22,17 @@ int left,
 
 /* Structure pour gérer le niveau (à compléter plus tard) */
 
-typedef struct Gestion
+typedef struct Operate
 {
 
-SDL_Surface *screen;
+    SDL_Surface *screen;
 
-} Gestion;
+} Operate;
+
+typedef struct Map
+{
+
+    SDL_Surface *background;
+
+} Map;
 

@@ -1,3 +1,3 @@
 #include "struct.h"
 
-extern Gestion jeu;
+extern Operate jeu;

@@ -8,7 +8,7 @@ void init(char *title)
 /* Initialise SDL Video. Si la valeur de retour est inférieure à zéro, la SDL n'a pas pu
  s'initialiser et on quite */
 
-if (SDL_Init(SDL_INIT_VIDEO ) < 0)
+if (SDL_Init(SDL_INIT_VIDEO) < 0)
 {
     printf("Impossible de lancer la SDL : %s\n", SDL_GetError());
     exit(1);
@@ -22,7 +22,7 @@ if (SDL_Init(SDL_INIT_VIDEO ) < 0)
 
 jeu.screen = SDL_SetVideoMode(SCREEN_long, SCREEN_haut, 0, SDL_HWPALETTE|SDL_DOUBLEBUF);
 
- /* Si on y arrive pas, on quitte */
+ /* Si on n'y arrive pas, on quitte */
 
 if (jeu.screen == NULL)
 {

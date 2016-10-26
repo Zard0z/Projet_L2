@@ -3,6 +3,15 @@
 #include <string.h>
 #include <math.h>
 #include <SDL/SDL.h>
+#include <SDL_image.h>
 
-#define SCREEN_long 640
-#define SCREEN_haut 480
+/* definition de l'ecran */
+
+#define SCREEN_length 640
+#define SCREEN_height 480
+
+/* definition de la couleur transparente */
+
+#define TRANS_R 255
+#define TRANS_G 0
+#define TRANS_B 255

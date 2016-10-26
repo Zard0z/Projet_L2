@@ -12,4 +12,4 @@ extern void delay(unsigned int);
 /* Déclaration des structures globales utilisées par le jeu */
 
 Input input;
-Gestion jeu;
+Operate jeu;

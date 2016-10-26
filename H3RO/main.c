@@ -6,10 +6,10 @@ unsigned int frameLimit = SDL_GetTicks() + 16;
 int go;
 
 /* Initialisation de la SDL dans une fonction séparée (voir après) */
-    init("H3RO");
+init("H3RO");
 
 /* Appelle la fonction cleanup à la fin du programme */
-     atexit(cleanup);
+atexit(cleanup);
 
 go = 1;
 
