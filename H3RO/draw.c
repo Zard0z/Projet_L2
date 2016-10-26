@@ -16,16 +16,43 @@ void drawImage(SDL_Surface *image, int x, int y)
    SDL_BlitSurface(image, NULL, jeu.screen, &dest);
 }
 
+  void drawTile(SDL_Surface *image, int destx, int desty, int srcx, int srcy)
+  {
+    /* Rectangle de destination à blitter */
+    SDL_Rect dest;
+
+    dest.x = destx;
+    dest.y = desty;
+    dest.w = TILE_SIZE;
+    dest.h = TILE_SIZE;
+
+    /* Rectangle source à blitter */
+    SDL_Rect src;
+
+    src.x = srcx;
+    src.y = srcy;
+    src.w = TILE_SIZE;
+    src.h = TILE_SIZE;
+
+    /* Blitte la tile choisie sur l'écran aux coordonnées x et y */
+
+    SDL_BlitSurface(image, &src, jeu.screen, &dest);
+
+  }
+
+
 void draw(void)
 {
 
 /* Affiche le fond (background) aux coordonnées (0,0) */
     drawImage(Map.background, 0, 0);
 
+/* Affiche la map de tiles */
+      drawMap();
+
 /* Affiche l'écran */
 
     SDL_Flip(jeu.screen);
-
 
 /* Delai */
 

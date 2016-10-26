@@ -49,6 +49,10 @@ void loadGame(void)
     /* Charge l'image du fond */
     Map.background = loadImage("images/background.png");
 
+    Map.tileSet = loadImage("images/tileset.png");
+
+    loadMap("map/map1.txt");
+
 }
 
 /* Fonction qui quitte le jeu proprement */
