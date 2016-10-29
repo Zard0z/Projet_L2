@@ -49,6 +49,10 @@ SDL_Surface *loadImage(char *name)
         return NULL;
     }
 
+    /* Ajoute la transparence à l'image temporaire en accord avec les defines TRANS_R, G, B */
+
+    SDL_SetColorKey(temp, (SDL_SRCCOLORKEY | SDL_RLEACCEL), SDL_MapRGB(temp->format, TRANS_R, TRANS_G,    TRANS_B)); 
+
 
     /* Convertit l'image au format de l'écran (screen) pour un blit plus rapide */
 
