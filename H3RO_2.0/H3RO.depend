@@ -373,10 +373,10 @@
 1477763190 c:\users\louis\desktop\h3ro_2.0\imput.h
 	"structs.h"
 
-1477764172 c:\users\louis\desktop\h3ro_2.0\structs.h
+1477766774 c:\users\louis\desktop\h3ro_2.0\structs.h
 	"defs.h"
 
-1477764172 c:\users\louis\desktop\h3ro_2.0\defs.h
+1477768716 c:\users\louis\desktop\h3ro_2.0\defs.h
 	<stdio.h>
 	<string.h>
 	<stdlib.h>
@@ -390,21 +390,27 @@
 	"begin_code.h"
 	"close_code.h"
 
-1477764915 source:c:\users\louis\desktop\h3ro_2.0\draw.c
+1477768653 source:c:\users\louis\desktop\h3ro_2.0\draw.c
 	"draw.h"
 
-1477764884 c:\users\louis\desktop\h3ro_2.0\draw.h
+1477768015 c:\users\louis\desktop\h3ro_2.0\draw.h
 	"structs.h"
 
-1477764359 source:c:\users\louis\desktop\h3ro_2.0\init.c
+1477767282 source:c:\users\louis\desktop\h3ro_2.0\init.c
 	"init.h"
 
-1477764884 c:\users\louis\desktop\h3ro_2.0\init.h
+1477767282 c:\users\louis\desktop\h3ro_2.0\init.h
 	"structs.h"
 
 1477764172 source:c:\users\louis\desktop\h3ro_2.0\main.c
 	"main.h"
 
 1477764359 c:\users\louis\desktop\h3ro_2.0\main.h
+	"structs.h"
+
+1477768578 source:c:\users\louis\desktop\h3ro_2.0\map.c
+	"map.h"
+
+1477768414 c:\users\louis\desktop\h3ro_2.0\map.h
 	"structs.h"
 
