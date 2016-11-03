@@ -57,7 +57,6 @@ void draw(void)
 
 }
 
-
 SDL_Surface *loadImage(char *name)
 {
     /* Charge une image temporaire avec SDL Image */

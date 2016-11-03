@@ -9,6 +9,8 @@ extern void draw(void);
 
 extern void loadGame(void);
 extern void delay(unsigned int);
+extern void update(void);
+
 
 
 /// Déclaration des structures globales utilisées par le jeu
