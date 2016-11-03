@@ -15,7 +15,7 @@
 	<math.h>
 	<SDL/SDL.h>
 
-1477668377 c:\users\louis\documents\compilateurs-c-efrei-gcc-4.9\i686-w64-mingw32\include\stdio.h
+1477664777 c:\users\louis\documents\compilateurs-c-efrei-gcc-4.9\i686-w64-mingw32\include\stdio.h
 	<crtdefs.h>
 	<_mingw_print_push.h>
 	<_mingw_off_t.h>
@@ -23,10 +23,10 @@
 	<sec_api/stdio_s.h>
 	<_mingw_print_pop.h>
 
-1477668370 c:\users\louis\documents\compilateurs-c-efrei-gcc-4.9\i686-w64-mingw32\include\crtdefs.h
+1477664770 c:\users\louis\documents\compilateurs-c-efrei-gcc-4.9\i686-w64-mingw32\include\crtdefs.h
 	<_mingw.h>
 
-1477668369 c:\users\louis\documents\compilateurs-c-efrei-gcc-4.9\i686-w64-mingw32\include\_mingw.h
+1477664769 c:\users\louis\documents\compilateurs-c-efrei-gcc-4.9\i686-w64-mingw32\include\_mingw.h
 	"_mingw_mac.h"
 	"_mingw_secapi.h"
 	"_cygwin.h"
@@ -34,61 +34,61 @@
 	"sdks/_mingw_directx.h"
 	"sdks/_mingw_ddk.h"
 
-1477668369 c:\users\louis\documents\compilateurs-c-efrei-gcc-4.9\i686-w64-mingw32\include\_mingw_mac.h
+1477664769 c:\users\louis\documents\compilateurs-c-efrei-gcc-4.9\i686-w64-mingw32\include\_mingw_mac.h
 
-1477668369 c:\users\louis\documents\compilateurs-c-efrei-gcc-4.9\i686-w64-mingw32\include\_mingw_secapi.h
+1477664769 c:\users\louis\documents\compilateurs-c-efrei-gcc-4.9\i686-w64-mingw32\include\_mingw_secapi.h
 
-1477668369 c:\users\louis\documents\compilateurs-c-efrei-gcc-4.9\i686-w64-mingw32\include\_cygwin.h
+1477664769 c:\users\louis\documents\compilateurs-c-efrei-gcc-4.9\i686-w64-mingw32\include\_cygwin.h
 	<stddef.h>
 
-1477668377 c:\users\louis\documents\compilateurs-c-efrei-gcc-4.9\i686-w64-mingw32\include\stddef.h
+1477664777 c:\users\louis\documents\compilateurs-c-efrei-gcc-4.9\i686-w64-mingw32\include\stddef.h
 	<crtdefs.h>
 
-1477668378 c:\users\louis\documents\compilateurs-c-efrei-gcc-4.9\i686-w64-mingw32\include\vadefs.h
+1477664778 c:\users\louis\documents\compilateurs-c-efrei-gcc-4.9\i686-w64-mingw32\include\vadefs.h
 	<_mingw.h>
 
-1477668390 c:\users\louis\documents\compilateurs-c-efrei-gcc-4.9\i686-w64-mingw32\include\sdks\_mingw_directx.h
+1477664790 c:\users\louis\documents\compilateurs-c-efrei-gcc-4.9\i686-w64-mingw32\include\sdks\_mingw_directx.h
 
-1477668390 c:\users\louis\documents\compilateurs-c-efrei-gcc-4.9\i686-w64-mingw32\include\sdks\_mingw_ddk.h
+1477664790 c:\users\louis\documents\compilateurs-c-efrei-gcc-4.9\i686-w64-mingw32\include\sdks\_mingw_ddk.h
 
-1477668369 c:\users\louis\documents\compilateurs-c-efrei-gcc-4.9\i686-w64-mingw32\include\_mingw_print_push.h
+1477664769 c:\users\louis\documents\compilateurs-c-efrei-gcc-4.9\i686-w64-mingw32\include\_mingw_print_push.h
 
-1477668369 c:\users\louis\documents\compilateurs-c-efrei-gcc-4.9\i686-w64-mingw32\include\_mingw_off_t.h
+1477664769 c:\users\louis\documents\compilateurs-c-efrei-gcc-4.9\i686-w64-mingw32\include\_mingw_off_t.h
 
-1477668377 c:\users\louis\documents\compilateurs-c-efrei-gcc-4.9\i686-w64-mingw32\include\swprintf.inl
+1477664777 c:\users\louis\documents\compilateurs-c-efrei-gcc-4.9\i686-w64-mingw32\include\swprintf.inl
 	<vadefs.h>
 
-1477668390 c:\users\louis\documents\compilateurs-c-efrei-gcc-4.9\i686-w64-mingw32\include\sec_api\stdio_s.h
+1477664790 c:\users\louis\documents\compilateurs-c-efrei-gcc-4.9\i686-w64-mingw32\include\sec_api\stdio_s.h
 	<stdio.h>
 
-1477668369 c:\users\louis\documents\compilateurs-c-efrei-gcc-4.9\i686-w64-mingw32\include\_mingw_print_pop.h
+1477664769 c:\users\louis\documents\compilateurs-c-efrei-gcc-4.9\i686-w64-mingw32\include\_mingw_print_pop.h
 
-1477668377 c:\users\louis\documents\compilateurs-c-efrei-gcc-4.9\i686-w64-mingw32\include\string.h
+1477664777 c:\users\louis\documents\compilateurs-c-efrei-gcc-4.9\i686-w64-mingw32\include\string.h
 	<crtdefs.h>
 	<sec_api/string_s.h>
 
-1477668390 c:\users\louis\documents\compilateurs-c-efrei-gcc-4.9\i686-w64-mingw32\include\sec_api\string_s.h
+1477664790 c:\users\louis\documents\compilateurs-c-efrei-gcc-4.9\i686-w64-mingw32\include\sec_api\string_s.h
 	<string.h>
 
-1477668377 c:\users\louis\documents\compilateurs-c-efrei-gcc-4.9\i686-w64-mingw32\include\stdlib.h
+1477664777 c:\users\louis\documents\compilateurs-c-efrei-gcc-4.9\i686-w64-mingw32\include\stdlib.h
 	<crtdefs.h>
 	<limits.h>
 	<sec_api/stdlib_s.h>
 	<malloc.h>
 
-1477668373 c:\users\louis\documents\compilateurs-c-efrei-gcc-4.9\i686-w64-mingw32\include\limits.h
+1477664773 c:\users\louis\documents\compilateurs-c-efrei-gcc-4.9\i686-w64-mingw32\include\limits.h
 	<crtdefs.h>
 
-1477668390 c:\users\louis\documents\compilateurs-c-efrei-gcc-4.9\i686-w64-mingw32\include\sec_api\stdlib_s.h
+1477664790 c:\users\louis\documents\compilateurs-c-efrei-gcc-4.9\i686-w64-mingw32\include\sec_api\stdlib_s.h
 	<stdlib.h>
 
-1477668373 c:\users\louis\documents\compilateurs-c-efrei-gcc-4.9\i686-w64-mingw32\include\malloc.h
+1477664773 c:\users\louis\documents\compilateurs-c-efrei-gcc-4.9\i686-w64-mingw32\include\malloc.h
 	<crtdefs.h>
 
-1477668374 c:\users\louis\documents\compilateurs-c-efrei-gcc-4.9\i686-w64-mingw32\include\math.h
+1477664774 c:\users\louis\documents\compilateurs-c-efrei-gcc-4.9\i686-w64-mingw32\include\math.h
 	<crtdefs.h>
 
-1477668379 c:\users\louis\documents\compilateurs-c-efrei-gcc-4.9\i686-w64-mingw32\include\sdl\sdl.h
+1477664779 c:\users\louis\documents\compilateurs-c-efrei-gcc-4.9\i686-w64-mingw32\include\sdl\sdl.h
 	"SDL_main.h"
 	"SDL_stdinc.h"
 	"SDL_audio.h"
@@ -107,14 +107,14 @@
 	"begin_code.h"
 	"close_code.h"
 
-1477668380 c:\users\louis\documents\compilateurs-c-efrei-gcc-4.9\i686-w64-mingw32\include\sdl\sdl_main.h
+1477664780 c:\users\louis\documents\compilateurs-c-efrei-gcc-4.9\i686-w64-mingw32\include\sdl\sdl_main.h
 	"SDL_stdinc.h"
 	"begin_code.h"
 	"close_code.h"
 	"begin_code.h"
 	"close_code.h"
 
-1477668380 c:\users\louis\documents\compilateurs-c-efrei-gcc-4.9\i686-w64-mingw32\include\sdl\sdl_stdinc.h
+1477664780 c:\users\louis\documents\compilateurs-c-efrei-gcc-4.9\i686-w64-mingw32\include\sdl\sdl_stdinc.h
 	"SDL_config.h"
 	<sys/types.h>
 	<stdio.h>
@@ -140,47 +140,47 @@
 	<stdlib.h>
 	"close_code.h"
 
-1477668380 c:\users\louis\documents\compilateurs-c-efrei-gcc-4.9\i686-w64-mingw32\include\sdl\sdl_config.h
+1477664780 c:\users\louis\documents\compilateurs-c-efrei-gcc-4.9\i686-w64-mingw32\include\sdl\sdl_config.h
 	"SDL_platform.h"
 	<stdarg.h>
 
-1477668380 c:\users\louis\documents\compilateurs-c-efrei-gcc-4.9\i686-w64-mingw32\include\sdl\sdl_platform.h
+1477664780 c:\users\louis\documents\compilateurs-c-efrei-gcc-4.9\i686-w64-mingw32\include\sdl\sdl_platform.h
 
-1477668377 c:\users\louis\documents\compilateurs-c-efrei-gcc-4.9\i686-w64-mingw32\include\stdarg.h
+1477664777 c:\users\louis\documents\compilateurs-c-efrei-gcc-4.9\i686-w64-mingw32\include\stdarg.h
 	<_mingw_stdarg.h>
 
-1477668369 c:\users\louis\documents\compilateurs-c-efrei-gcc-4.9\i686-w64-mingw32\include\_mingw_stdarg.h
+1477664769 c:\users\louis\documents\compilateurs-c-efrei-gcc-4.9\i686-w64-mingw32\include\_mingw_stdarg.h
 	<vadefs.h>
 
-1477668390 c:\users\louis\documents\compilateurs-c-efrei-gcc-4.9\i686-w64-mingw32\include\sys\types.h
+1477664790 c:\users\louis\documents\compilateurs-c-efrei-gcc-4.9\i686-w64-mingw32\include\sys\types.h
 	<crtdefs.h>
 	<_mingw_off_t.h>
 
-1477668374 c:\users\louis\documents\compilateurs-c-efrei-gcc-4.9\i686-w64-mingw32\include\memory.h
+1477664774 c:\users\louis\documents\compilateurs-c-efrei-gcc-4.9\i686-w64-mingw32\include\memory.h
 	<crtdefs.h>
 	<sec_api/memory_s.h>
 
-1477668390 c:\users\louis\documents\compilateurs-c-efrei-gcc-4.9\i686-w64-mingw32\include\sec_api\memory_s.h
+1477664790 c:\users\louis\documents\compilateurs-c-efrei-gcc-4.9\i686-w64-mingw32\include\sec_api\memory_s.h
 	<memory.h>
 
-1477668377 c:\users\louis\documents\compilateurs-c-efrei-gcc-4.9\i686-w64-mingw32\include\strings.h
+1477664777 c:\users\louis\documents\compilateurs-c-efrei-gcc-4.9\i686-w64-mingw32\include\strings.h
 	<string.h>
 
-1477668373 c:\users\louis\documents\compilateurs-c-efrei-gcc-4.9\i686-w64-mingw32\include\inttypes.h
+1477664773 c:\users\louis\documents\compilateurs-c-efrei-gcc-4.9\i686-w64-mingw32\include\inttypes.h
 	<crtdefs.h>
 	<stdint.h>
 	<stddef.h>
 	<_mingw_print_push.h>
 	<_mingw_print_pop.h>
 
-1477668377 c:\users\louis\documents\compilateurs-c-efrei-gcc-4.9\i686-w64-mingw32\include\stdint.h
+1477664777 c:\users\louis\documents\compilateurs-c-efrei-gcc-4.9\i686-w64-mingw32\include\stdint.h
 	<crtdefs.h>
 	<stddef.h>
 
-1477668370 c:\users\louis\documents\compilateurs-c-efrei-gcc-4.9\i686-w64-mingw32\include\ctype.h
+1477664770 c:\users\louis\documents\compilateurs-c-efrei-gcc-4.9\i686-w64-mingw32\include\ctype.h
 	<crtdefs.h>
 
-1477668373 c:\users\louis\documents\compilateurs-c-efrei-gcc-4.9\i686-w64-mingw32\include\iconv.h
+1477664773 c:\users\louis\documents\compilateurs-c-efrei-gcc-4.9\i686-w64-mingw32\include\iconv.h
 	"iconv.h"
 	<stddef.h>
 	<errno.h>
@@ -189,32 +189,32 @@
 	<time.h>
 	<wchar.h>
 
-1477668371 c:\users\louis\documents\compilateurs-c-efrei-gcc-4.9\i686-w64-mingw32\include\errno.h
+1477664771 c:\users\louis\documents\compilateurs-c-efrei-gcc-4.9\i686-w64-mingw32\include\errno.h
 	<crtdefs.h>
 
-1477668378 c:\users\louis\documents\compilateurs-c-efrei-gcc-4.9\i686-w64-mingw32\include\time.h
+1477664778 c:\users\louis\documents\compilateurs-c-efrei-gcc-4.9\i686-w64-mingw32\include\time.h
 	<crtdefs.h>
 	<_timeval.h>
 	<sec_api/time_s.h>
 	<sys/timeb.h>
 	<pthread_time.h>
 
-1477668369 c:\users\louis\documents\compilateurs-c-efrei-gcc-4.9\i686-w64-mingw32\include\_timeval.h
+1477664769 c:\users\louis\documents\compilateurs-c-efrei-gcc-4.9\i686-w64-mingw32\include\_timeval.h
 
-1477668390 c:\users\louis\documents\compilateurs-c-efrei-gcc-4.9\i686-w64-mingw32\include\sec_api\time_s.h
+1477664790 c:\users\louis\documents\compilateurs-c-efrei-gcc-4.9\i686-w64-mingw32\include\sec_api\time_s.h
 	<time.h>
 
-1477668390 c:\users\louis\documents\compilateurs-c-efrei-gcc-4.9\i686-w64-mingw32\include\sys\timeb.h
+1477664790 c:\users\louis\documents\compilateurs-c-efrei-gcc-4.9\i686-w64-mingw32\include\sys\timeb.h
 	<crtdefs.h>
 	<sec_api/sys/timeb_s.h>
 
-1477668390 c:\users\louis\documents\compilateurs-c-efrei-gcc-4.9\i686-w64-mingw32\include\sec_api\sys\timeb_s.h
+1477664790 c:\users\louis\documents\compilateurs-c-efrei-gcc-4.9\i686-w64-mingw32\include\sec_api\sys\timeb_s.h
 	<sys/timeb.h>
 
-1477668376 c:\users\louis\documents\compilateurs-c-efrei-gcc-4.9\i686-w64-mingw32\include\pthread_time.h
+1477664776 c:\users\louis\documents\compilateurs-c-efrei-gcc-4.9\i686-w64-mingw32\include\pthread_time.h
 	<sys/timeb.h>
 
-1477668378 c:\users\louis\documents\compilateurs-c-efrei-gcc-4.9\i686-w64-mingw32\include\wchar.h
+1477664778 c:\users\louis\documents\compilateurs-c-efrei-gcc-4.9\i686-w64-mingw32\include\wchar.h
 	<crtdefs.h>
 	<_mingw_print_push.h>
 	<_mingw_off_t.h>
@@ -223,16 +223,16 @@
 	<sec_api/wchar_s.h>
 	<_mingw_print_pop.h>
 
-1477668369 c:\users\louis\documents\compilateurs-c-efrei-gcc-4.9\i686-w64-mingw32\include\_mingw_stat64.h
+1477664769 c:\users\louis\documents\compilateurs-c-efrei-gcc-4.9\i686-w64-mingw32\include\_mingw_stat64.h
 
-1477668390 c:\users\louis\documents\compilateurs-c-efrei-gcc-4.9\i686-w64-mingw32\include\sec_api\wchar_s.h
+1477664790 c:\users\louis\documents\compilateurs-c-efrei-gcc-4.9\i686-w64-mingw32\include\sec_api\wchar_s.h
 	<wchar.h>
 
-1477668380 c:\users\louis\documents\compilateurs-c-efrei-gcc-4.9\i686-w64-mingw32\include\sdl\begin_code.h
+1477664780 c:\users\louis\documents\compilateurs-c-efrei-gcc-4.9\i686-w64-mingw32\include\sdl\begin_code.h
 
-1477668380 c:\users\louis\documents\compilateurs-c-efrei-gcc-4.9\i686-w64-mingw32\include\sdl\close_code.h
+1477664780 c:\users\louis\documents\compilateurs-c-efrei-gcc-4.9\i686-w64-mingw32\include\sdl\close_code.h
 
-1477668379 c:\users\louis\documents\compilateurs-c-efrei-gcc-4.9\i686-w64-mingw32\include\sdl\sdl_audio.h
+1477664779 c:\users\louis\documents\compilateurs-c-efrei-gcc-4.9\i686-w64-mingw32\include\sdl\sdl_audio.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"SDL_endian.h"
@@ -242,24 +242,24 @@
 	"begin_code.h"
 	"close_code.h"
 
-1477668380 c:\users\louis\documents\compilateurs-c-efrei-gcc-4.9\i686-w64-mingw32\include\sdl\sdl_error.h
+1477664780 c:\users\louis\documents\compilateurs-c-efrei-gcc-4.9\i686-w64-mingw32\include\sdl\sdl_error.h
 	"SDL_stdinc.h"
 	"begin_code.h"
 	"close_code.h"
 
-1477668380 c:\users\louis\documents\compilateurs-c-efrei-gcc-4.9\i686-w64-mingw32\include\sdl\sdl_endian.h
+1477664780 c:\users\louis\documents\compilateurs-c-efrei-gcc-4.9\i686-w64-mingw32\include\sdl\sdl_endian.h
 	"SDL_stdinc.h"
 	<endian.h>
 	"begin_code.h"
 	"close_code.h"
 
-1477668380 c:\users\louis\documents\compilateurs-c-efrei-gcc-4.9\i686-w64-mingw32\include\sdl\sdl_mutex.h
+1477664780 c:\users\louis\documents\compilateurs-c-efrei-gcc-4.9\i686-w64-mingw32\include\sdl\sdl_mutex.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"begin_code.h"
 	"close_code.h"
 
-1477668380 c:\users\louis\documents\compilateurs-c-efrei-gcc-4.9\i686-w64-mingw32\include\sdl\sdl_thread.h
+1477664780 c:\users\louis\documents\compilateurs-c-efrei-gcc-4.9\i686-w64-mingw32\include\sdl\sdl_thread.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"SDL_mutex.h"
@@ -267,28 +267,28 @@
 	<process.h>
 	"close_code.h"
 
-1477668376 c:\users\louis\documents\compilateurs-c-efrei-gcc-4.9\i686-w64-mingw32\include\process.h
+1477664776 c:\users\louis\documents\compilateurs-c-efrei-gcc-4.9\i686-w64-mingw32\include\process.h
 	<crtdefs.h>
 	<sys/types.h>
 
-1477668380 c:\users\louis\documents\compilateurs-c-efrei-gcc-4.9\i686-w64-mingw32\include\sdl\sdl_rwops.h
+1477664780 c:\users\louis\documents\compilateurs-c-efrei-gcc-4.9\i686-w64-mingw32\include\sdl\sdl_rwops.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"begin_code.h"
 	"close_code.h"
 
-1477668380 c:\users\louis\documents\compilateurs-c-efrei-gcc-4.9\i686-w64-mingw32\include\sdl\sdl_cdrom.h
+1477664780 c:\users\louis\documents\compilateurs-c-efrei-gcc-4.9\i686-w64-mingw32\include\sdl\sdl_cdrom.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"begin_code.h"
 	"close_code.h"
 
-1477668380 c:\users\louis\documents\compilateurs-c-efrei-gcc-4.9\i686-w64-mingw32\include\sdl\sdl_cpuinfo.h
+1477664780 c:\users\louis\documents\compilateurs-c-efrei-gcc-4.9\i686-w64-mingw32\include\sdl\sdl_cpuinfo.h
 	"SDL_stdinc.h"
 	"begin_code.h"
 	"close_code.h"
 
-1477668380 c:\users\louis\documents\compilateurs-c-efrei-gcc-4.9\i686-w64-mingw32\include\sdl\sdl_events.h
+1477664780 c:\users\louis\documents\compilateurs-c-efrei-gcc-4.9\i686-w64-mingw32\include\sdl\sdl_events.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"SDL_active.h"
@@ -299,58 +299,58 @@
 	"begin_code.h"
 	"close_code.h"
 
-1477668379 c:\users\louis\documents\compilateurs-c-efrei-gcc-4.9\i686-w64-mingw32\include\sdl\sdl_active.h
+1477664779 c:\users\louis\documents\compilateurs-c-efrei-gcc-4.9\i686-w64-mingw32\include\sdl\sdl_active.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"begin_code.h"
 	"close_code.h"
 
-1477668380 c:\users\louis\documents\compilateurs-c-efrei-gcc-4.9\i686-w64-mingw32\include\sdl\sdl_keyboard.h
+1477664780 c:\users\louis\documents\compilateurs-c-efrei-gcc-4.9\i686-w64-mingw32\include\sdl\sdl_keyboard.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"SDL_keysym.h"
 	"begin_code.h"
 	"close_code.h"
 
-1477668380 c:\users\louis\documents\compilateurs-c-efrei-gcc-4.9\i686-w64-mingw32\include\sdl\sdl_keysym.h
+1477664780 c:\users\louis\documents\compilateurs-c-efrei-gcc-4.9\i686-w64-mingw32\include\sdl\sdl_keysym.h
 
-1477668380 c:\users\louis\documents\compilateurs-c-efrei-gcc-4.9\i686-w64-mingw32\include\sdl\sdl_mouse.h
+1477664780 c:\users\louis\documents\compilateurs-c-efrei-gcc-4.9\i686-w64-mingw32\include\sdl\sdl_mouse.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"SDL_video.h"
 	"begin_code.h"
 	"close_code.h"
 
-1477668380 c:\users\louis\documents\compilateurs-c-efrei-gcc-4.9\i686-w64-mingw32\include\sdl\sdl_video.h
+1477664780 c:\users\louis\documents\compilateurs-c-efrei-gcc-4.9\i686-w64-mingw32\include\sdl\sdl_video.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"SDL_rwops.h"
 	"begin_code.h"
 	"close_code.h"
 
-1477668380 c:\users\louis\documents\compilateurs-c-efrei-gcc-4.9\i686-w64-mingw32\include\sdl\sdl_joystick.h
+1477664780 c:\users\louis\documents\compilateurs-c-efrei-gcc-4.9\i686-w64-mingw32\include\sdl\sdl_joystick.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"begin_code.h"
 	"close_code.h"
 
-1477668380 c:\users\louis\documents\compilateurs-c-efrei-gcc-4.9\i686-w64-mingw32\include\sdl\sdl_quit.h
+1477664780 c:\users\louis\documents\compilateurs-c-efrei-gcc-4.9\i686-w64-mingw32\include\sdl\sdl_quit.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 
-1477668380 c:\users\louis\documents\compilateurs-c-efrei-gcc-4.9\i686-w64-mingw32\include\sdl\sdl_loadso.h
-	"SDL_stdinc.h"
-	"SDL_error.h"
-	"begin_code.h"
-	"close_code.h"
-
-1477668380 c:\users\louis\documents\compilateurs-c-efrei-gcc-4.9\i686-w64-mingw32\include\sdl\sdl_timer.h
+1477664780 c:\users\louis\documents\compilateurs-c-efrei-gcc-4.9\i686-w64-mingw32\include\sdl\sdl_loadso.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"begin_code.h"
 	"close_code.h"
 
-1477668380 c:\users\louis\documents\compilateurs-c-efrei-gcc-4.9\i686-w64-mingw32\include\sdl\sdl_version.h
+1477664780 c:\users\louis\documents\compilateurs-c-efrei-gcc-4.9\i686-w64-mingw32\include\sdl\sdl_timer.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1477664780 c:\users\louis\documents\compilateurs-c-efrei-gcc-4.9\i686-w64-mingw32\include\sdl\sdl_version.h
 	"SDL_stdinc.h"
 	"begin_code.h"
 	"close_code.h"
@@ -384,7 +384,7 @@
 	<SDL/SDL.h>
 	<SDL/SDL_image.h>
 
-1477668380 c:\users\louis\documents\compilateurs-c-efrei-gcc-4.9\i686-w64-mingw32\include\sdl\sdl_image.h
+1477664780 c:\users\louis\documents\compilateurs-c-efrei-gcc-4.9\i686-w64-mingw32\include\sdl\sdl_image.h
 	"SDL.h"
 	"SDL_version.h"
 	"begin_code.h"
@@ -453,5 +453,46 @@
 	"map.h"
 
 1477731880 c:\users\20150276\desktop\projet_l2-master\h3ro_2.0\map.h
+	"structs.h"
+
+1478210231 source:c:\users\louis\documents\projet_l2\h3ro_2.0\draw.c
+	"draw.h"
+
+1478210231 c:\users\louis\documents\projet_l2\h3ro_2.0\draw.h
+	"structs.h"
+
+1478210231 c:\users\louis\documents\projet_l2\h3ro_2.0\structs.h
+	"defs.h"
+
+1478210231 c:\users\louis\documents\projet_l2\h3ro_2.0\defs.h
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+	<math.h>
+	<SDL/SDL.h>
+	<SDL/SDL_image.h>
+
+1478210231 source:c:\users\louis\documents\projet_l2\h3ro_2.0\imput.c
+	"imput.h"
+
+1478210231 c:\users\louis\documents\projet_l2\h3ro_2.0\imput.h
+	"structs.h"
+
+1478210231 source:c:\users\louis\documents\projet_l2\h3ro_2.0\init.c
+	"init.h"
+
+1478210231 c:\users\louis\documents\projet_l2\h3ro_2.0\init.h
+	"structs.h"
+
+1478210231 source:c:\users\louis\documents\projet_l2\h3ro_2.0\main.c
+	"main.h"
+
+1478210231 c:\users\louis\documents\projet_l2\h3ro_2.0\main.h
+	"structs.h"
+
+1478210231 source:c:\users\louis\documents\projet_l2\h3ro_2.0\map.c
+	"map.h"
+
+1478210231 c:\users\louis\documents\projet_l2\h3ro_2.0\map.h
 	"structs.h"
 
