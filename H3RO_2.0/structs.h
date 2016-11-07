@@ -21,14 +21,22 @@ typedef struct Input
 
 typedef struct Hero
 {
-   //Sprite du héros (pas d'animation pour l'instant)
-   SDL_Surface *sprite;
+    //Sprite du héros (pas d'animation pour l'instant)
+    SDL_Surface *sprite;
 
-   /* Coordonnées du héros */
-   int x, y;
+    /* Coordonnées du héros */
+    int x, y;
 
-/* Variables utiles pour l'animation */
-int frameNumber, frameTimer;
+    /* Largeur, hauteur du sprite */
+    int h, w;
+
+    /* Variables utiles pour l'animation */
+    int frameNumber, frameTimer;
+    int etat, direction;
+
+    /* Variables utiles pour la gestion des collisions et le temps de réaction de la mort*/
+    int onGround, timerMort;
+    float dirX, dirY;
 
 } Hero;
 

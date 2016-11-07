@@ -47,10 +47,10 @@ void draw(void)
     drawImage(map.background, 0, 0);
 
     /* Affiche la map de tiles */
-    drawMap();
+     drawMap();
 
     /* Affiche le joueur */
-    drawplayer();
+    drawanimatedplayer();
 
     /* Affiche l'écran */
     SDL_Flip(jeu.screen);

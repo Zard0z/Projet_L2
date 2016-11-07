@@ -32,7 +32,7 @@ int main( int argc, char *argv[ ] )
         draw();
 
          /* On met à jour le jeu */
-        update();
+        updatePlayer();
 
         /* Gestion des 60 fps ( 60 images pas seconde : soit 1s ->1000ms/60 = 16.6 -> 16
         On doit donc attendre 16 ms entre chaque image (frame) */
