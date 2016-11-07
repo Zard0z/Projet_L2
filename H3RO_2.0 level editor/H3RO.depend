@@ -427,3 +427,44 @@
 1478182296 c:\users\20150276\desktop\projet_l2-master\h3ro_2.0 level editor\map.h
 	"structs.h"
 
+1478554139 source:c:\users\louis\desktop\projet_l2-master\h3ro_2.0 level editor\draw.c
+	"draw.h"
+
+1478554139 c:\users\louis\desktop\projet_l2-master\h3ro_2.0 level editor\draw.h
+	"structs.h"
+
+1478554139 c:\users\louis\desktop\projet_l2-master\h3ro_2.0 level editor\structs.h
+	"defs.h"
+
+1478556103 c:\users\louis\desktop\projet_l2-master\h3ro_2.0 level editor\defs.h
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+	<math.h>
+	<SDL/SDL.h>
+	<SDL/SDL_image.h>
+
+1478554139 source:c:\users\louis\desktop\projet_l2-master\h3ro_2.0 level editor\imput.c
+	"imput.h"
+
+1478554139 c:\users\louis\desktop\projet_l2-master\h3ro_2.0 level editor\imput.h
+	"structs.h"
+
+1478554139 source:c:\users\louis\desktop\projet_l2-master\h3ro_2.0 level editor\init.c
+	"init.h"
+
+1478554139 c:\users\louis\desktop\projet_l2-master\h3ro_2.0 level editor\init.h
+	"structs.h"
+
+1478554139 source:c:\users\louis\desktop\projet_l2-master\h3ro_2.0 level editor\main.c
+	"main.h"
+
+1478554139 c:\users\louis\desktop\projet_l2-master\h3ro_2.0 level editor\main.h
+	"structs.h"
+
+1478554139 source:c:\users\louis\desktop\projet_l2-master\h3ro_2.0 level editor\map.c
+	"map.h"
+
+1478554139 c:\users\louis\desktop\projet_l2-master\h3ro_2.0 level editor\map.h
+	"structs.h"
+

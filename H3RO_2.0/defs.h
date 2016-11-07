@@ -29,7 +29,7 @@
 #define TIME_BETWEEN_2_FRAMES 8
 
 ///Vitesse de déplacement en pixels du sprite POUR LA COKE!!!!!!!!!
-#define PLAYER_SPEED 6
+#define PLAYER_SPEED 8
 
 //Valeurs attribuées aux états/directions
 #define WALK_RIGHT 1
@@ -46,4 +46,4 @@
 //Constantes définissant la gravité et la vitesse max de chute
 #define GRAVITY_SPEED 0.6
 #define MAX_FALL_SPEED 10
-#define JUMP_HEIGHT 13
+#define JUMP_HEIGHT 15

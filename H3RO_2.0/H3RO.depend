@@ -555,3 +555,56 @@
 1478525545 c:\users\20150253\downloads\projet_l2-master\projet_l2-master\h3ro_2.0\animation.h
 	"structs.h"
 
+1478554139 source:c:\users\louis\desktop\projet_l2-master\h3ro_2.0\animation.c
+	"animation.h"
+
+1478554139 c:\users\louis\desktop\projet_l2-master\h3ro_2.0\animation.h
+	"structs.h"
+
+1478554139 c:\users\louis\desktop\projet_l2-master\h3ro_2.0\structs.h
+	"defs.h"
+
+1478556102 c:\users\louis\desktop\projet_l2-master\h3ro_2.0\defs.h
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+	<math.h>
+	<SDL/SDL.h>
+	<SDL/SDL_image.h>
+
+1478554139 source:c:\users\louis\desktop\projet_l2-master\h3ro_2.0\draw.c
+	"draw.h"
+
+1478554139 c:\users\louis\desktop\projet_l2-master\h3ro_2.0\draw.h
+	"structs.h"
+
+1478554139 source:c:\users\louis\desktop\projet_l2-master\h3ro_2.0\imput.c
+	"imput.h"
+
+1478554139 c:\users\louis\desktop\projet_l2-master\h3ro_2.0\imput.h
+	"structs.h"
+
+1478554139 source:c:\users\louis\desktop\projet_l2-master\h3ro_2.0\init.c
+	"init.h"
+
+1478554139 c:\users\louis\desktop\projet_l2-master\h3ro_2.0\init.h
+	"structs.h"
+
+1478554139 source:c:\users\louis\desktop\projet_l2-master\h3ro_2.0\main.c
+	"main.h"
+
+1478554139 c:\users\louis\desktop\projet_l2-master\h3ro_2.0\main.h
+	"structs.h"
+
+1478554139 source:c:\users\louis\desktop\projet_l2-master\h3ro_2.0\map.c
+	"map.h"
+
+1478554139 c:\users\louis\desktop\projet_l2-master\h3ro_2.0\map.h
+	"structs.h"
+
+1478554139 source:c:\users\louis\desktop\projet_l2-master\h3ro_2.0\player.c
+	"player.h"
+
+1478554139 c:\users\louis\desktop\projet_l2-master\h3ro_2.0\player.h
+	"structs.h"
+

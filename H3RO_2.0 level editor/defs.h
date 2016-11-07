@@ -5,8 +5,8 @@
 #include <SDL/SDL.h>
 #include <SDL/SDL_image.h>
 
-#define SCREEN_WIDTH 640
-#define SCREEN_HEIGHT 480
+#define SCREEN_WIDTH 1080
+#define SCREEN_HEIGHT 720
 
 /* Valeur RGB pour la transparence (canal alpha) */
  #define TRANS_R 255
