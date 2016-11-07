@@ -9,7 +9,7 @@ void initializePlayer(void)
 
     //Indique l'état et la direction de notre héros
     player.direction = RIGHT;
-    player.etat = WALK;
+    player.etat = IDLE;
 
     //Réinitialise le timer de l'animation et la frame
     player.frameNumber = 0;
@@ -84,27 +84,53 @@ void updatePlayer(void)
     //Voilà, au lieu de changer directement les coordonnées du joueur, on passe par un vecteur
     //qui sera utilisé par la fonction mapCollision(), qui regardera si on peut ou pas déplacer
     //le joueur selon ce vecteur et changera les coordonnées du player en fonction.
-     if (input.left == 1)
+    if (input.left == 1)
     {
         player.dirX -= PLAYER_SPEED;
+        player.direction = LEFT;
 
-        //On teste le sens pour l'animation : si le joueur allait dans le sens contraire
-        //précédemment, il faut recharger le spritesheet pour l'animation.
-        if(player.direction == RIGHT)
+        if(player.etat != WALK_LEFT && player.onGround == 1)
         {
-            player.direction = LEFT;
+            player.etat = WALK_LEFT;
             player.sprite = loadImage("graphics/walkleft.png");
+            player.frameNumber = 0;
         }
     }
 
     else if (input.right == 1)
     {
         player.dirX += PLAYER_SPEED;
+        player.direction = RIGHT;
 
-        if(player.direction == LEFT)
+        if(player.etat != WALK_RIGHT && player.onGround == 1)
         {
-            player.direction =  RIGHT;
+            player.etat = WALK_RIGHT;
             player.sprite = loadImage("graphics/walkright.png");
+            player.frameNumber = 0;
+        }
+    }
+
+    //Si on n'appuie sur rien et qu'on est sur le sol, on charge l'animation marquant l'inactivité (Idle)
+    else if(input.right == 0 && input.left == 0 && player.onGround == 1)
+    {
+        //On teste si le joueur n'était pas déjà inactif, pour ne pas recharger l'animation
+        //à chaque tour de boucle
+
+        if(player.etat != IDLE)
+        {
+            player.etat = IDLE;
+            //On change l'animation selon la direction
+            if(player.direction == LEFT)
+            {
+                player.sprite = loadImage("graphics/IdleLeft.png");
+                player.frameNumber = 0;
+            }
+            else
+            {
+                player.sprite = loadImage("graphics/IdleRight.png");
+                player.frameNumber = 0;
+            }
+
         }
 
     }
@@ -117,6 +143,24 @@ void updatePlayer(void)
     {
         player.dirY = -JUMP_HEIGHT;
         player.onGround = 0;
+
+    }
+    //On gère l'anim du saut
+
+    if(player.onGround == 0)
+    {
+        if(player.direction == RIGHT && player.etat != JUMP_RIGHT)
+        {
+            player.etat = JUMP_RIGHT;
+            player.sprite = loadImage("graphics/JumpRight.png");
+            player.frameNumber = 0;
+        }
+        else if(player.direction == LEFT && player.etat != JUMP_LEFT)
+        {
+            player.etat = JUMP_LEFT;
+            player.sprite = loadImage("graphics/JumpLeft.png");
+            player.frameNumber = 0;
+        }
 
     }
 

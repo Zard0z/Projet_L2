@@ -5,8 +5,8 @@
 #include <SDL/SDL.h>
 #include <SDL/SDL_image.h>
 
-#define SCREEN_WIDTH 640
-#define SCREEN_HEIGHT 480
+#define SCREEN_WIDTH 1080
+#define SCREEN_HEIGHT 720
 
 /* Valeur RGB pour la transparence (canal alpha) */
 #define TRANS_R 255
@@ -32,9 +32,11 @@
 #define PLAYER_SPEED 6
 
 //Valeurs attribuées aux états/directions
-#define WALK 1
-#define IDLE 2
-#define JUMP 3
+#define WALK_RIGHT 1
+#define WALK_LEFT 2
+#define IDLE 3
+#define JUMP_RIGHT 4
+#define JUMP_LEFT 5
 #define RIGHT 1
 #define LEFT 2
 
