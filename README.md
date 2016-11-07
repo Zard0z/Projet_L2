@@ -1,7 +1,8 @@
 # Projet_L2
 Projet de programmation réalisé au cours d'une deuxième année du cycle préparatoire à l'EFREI.
 
--lmingw32 -lSDLmain
+-lmingw32
+-lSDLmain
 -lSDL
 -lm
 -lSDL_image
