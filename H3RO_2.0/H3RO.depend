@@ -414,16 +414,16 @@
 1477768414 c:\users\louis\desktop\h3ro_2.0\map.h
 	"structs.h"
 
-1478180334 source:c:\users\20150276\desktop\projet_l2-master\h3ro_2.0\draw.c
+1478519187 source:c:\users\20150276\desktop\projet_l2-master\h3ro_2.0\draw.c
 	"draw.h"
 
-1477731880 c:\users\20150276\desktop\projet_l2-master\h3ro_2.0\draw.h
+1478519511 c:\users\20150276\desktop\projet_l2-master\h3ro_2.0\draw.h
 	"structs.h"
 
-1477731880 c:\users\20150276\desktop\projet_l2-master\h3ro_2.0\structs.h
+1478519511 c:\users\20150276\desktop\projet_l2-master\h3ro_2.0\structs.h
 	"defs.h"
 
-1477731880 c:\users\20150276\desktop\projet_l2-master\h3ro_2.0\defs.h
+1478519084 c:\users\20150276\desktop\projet_l2-master\h3ro_2.0\defs.h
 	<stdio.h>
 	<string.h>
 	<stdlib.h>
@@ -431,28 +431,28 @@
 	<SDL/SDL.h>
 	<SDL/SDL_image.h>
 
-1478181199 source:c:\users\20150276\desktop\projet_l2-master\h3ro_2.0\imput.c
+1478182296 source:c:\users\20150276\desktop\projet_l2-master\h3ro_2.0\imput.c
 	"imput.h"
 
-1478181199 c:\users\20150276\desktop\projet_l2-master\h3ro_2.0\imput.h
+1478182296 c:\users\20150276\desktop\projet_l2-master\h3ro_2.0\imput.h
 	"structs.h"
 
-1477731880 source:c:\users\20150276\desktop\projet_l2-master\h3ro_2.0\init.c
+1478182296 source:c:\users\20150276\desktop\projet_l2-master\h3ro_2.0\init.c
 	"init.h"
 
-1477731880 c:\users\20150276\desktop\projet_l2-master\h3ro_2.0\init.h
+1478182296 c:\users\20150276\desktop\projet_l2-master\h3ro_2.0\init.h
 	"structs.h"
 
-1478181199 source:c:\users\20150276\desktop\projet_l2-master\h3ro_2.0\main.c
+1478519084 source:c:\users\20150276\desktop\projet_l2-master\h3ro_2.0\main.c
 	"main.h"
 
-1478181199 c:\users\20150276\desktop\projet_l2-master\h3ro_2.0\main.h
+1478519084 c:\users\20150276\desktop\projet_l2-master\h3ro_2.0\main.h
 	"structs.h"
 
-1478181199 source:c:\users\20150276\desktop\projet_l2-master\h3ro_2.0\map.c
+1478182296 source:c:\users\20150276\desktop\projet_l2-master\h3ro_2.0\map.c
 	"map.h"
 
-1477731880 c:\users\20150276\desktop\projet_l2-master\h3ro_2.0\map.h
+1478182296 c:\users\20150276\desktop\projet_l2-master\h3ro_2.0\map.h
 	"structs.h"
 
 1478210231 source:c:\users\louis\documents\projet_l2\h3ro_2.0\draw.c
@@ -494,5 +494,11 @@
 	"map.h"
 
 1478210231 c:\users\louis\documents\projet_l2\h3ro_2.0\map.h
+	"structs.h"
+
+1478519084 source:c:\users\20150276\desktop\projet_l2-master\h3ro_2.0\player.c
+	"player.h"
+
+1478518348 c:\users\20150276\desktop\projet_l2-master\h3ro_2.0\player.h
 	"structs.h"
 

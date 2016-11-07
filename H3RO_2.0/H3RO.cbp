@@ -42,6 +42,10 @@
 			<Add library="dxguid" />
 			<Add directory="C:/Users/louis/Documents/Compilateurs-C-EFREI-gcc-4.9/i686-w64-mingw32/lib" />
 		</Linker>
+		<Unit filename="animation.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="animation.h" />
 		<Unit filename="defs.h" />
 		<Unit filename="draw.c">
 			<Option compilerVar="CC" />
@@ -63,6 +67,10 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="map.h" />
+		<Unit filename="player.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="player.h" />
 		<Unit filename="structs.h" />
 		<Extensions>
 			<code_completion />

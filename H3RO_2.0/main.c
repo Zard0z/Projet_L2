@@ -8,6 +8,9 @@ int main( int argc, char *argv[ ] )
     /* Initialisation de la SDL dans une fonction séparée (voir après) */
     init("H3RO");
 
+    /* On initialise le joueur */
+    initializePlayer();
+
     /* Chargement des ressources (graphismes, sons) */
     loadGame();
 

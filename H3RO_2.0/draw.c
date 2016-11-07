@@ -49,6 +49,9 @@ void draw(void)
     /* Affiche la map de tiles */
     drawMap();
 
+    /* Affiche le joueur */
+    drawplayer();
+
     /* Affiche l'écran */
     SDL_Flip(jeu.screen);
 

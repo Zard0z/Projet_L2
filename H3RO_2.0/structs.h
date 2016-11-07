@@ -17,6 +17,20 @@ typedef struct Input
     pause;
 } Input;
 
+/* Structure pour gérer notre héros */
+
+typedef struct Hero
+{
+   //Sprite du héros (pas d'animation pour l'instant)
+   SDL_Surface *sprite;
+
+   /* Coordonnées du héros */
+   int x, y;
+
+/* Variables utiles pour l'animation */
+int frameNumber, frameTimer;
+
+} Hero;
 
 /* Structure pour gérer le niveau (à compléter plus tard) */
 
@@ -40,3 +54,4 @@ typedef struct Map
     /* Tableau à double dimension représentant la map de tiles */
     int tile[MAX_MAP_Y][MAX_MAP_X];
 } Map;
+

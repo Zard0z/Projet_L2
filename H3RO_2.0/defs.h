@@ -20,3 +20,10 @@
 
  /* Taille d'une tile (32 x 32 pixels) */
  #define TILE_SIZE 32
+
+/* Taille du sprite de notre héros (largeur = width et hauteur = heigth) */
+#define PLAYER_WIDTH 40
+#define PLAYER_HEIGTH 80
+
+/* Constantes pour l'animation  POUR LA COKE!!!!!!!!!*/
+#define TIME_BETWEEN_2_FRAMES 8
