@@ -160,8 +160,8 @@ void updatePlayer(void)
     /* Réactive la possibilité de double saut si on tombe sans sauter */
     if (player.onGround == 1)
         player.jump = 1;
-
-
+    
+    
     //On gère l'anim du saut
 
     if(player.onGround == 0)

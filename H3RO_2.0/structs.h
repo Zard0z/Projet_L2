@@ -1,6 +1,6 @@
 #include "defs.h"
 
-/* Structures qui seront utilisées pour gérer le jeu */
+///Structures qui seront utilisées pour gérer le jeu
 
 /* Structure pour gérer l'input (clavier puis joystick) */
 
@@ -37,6 +37,7 @@ typedef struct Hero
     /* Variables utiles pour la gestion des collisions et le temps de réaction de la mort*/
     int onGround, timerMort;
     float dirX, dirY;
+    int jump;
 
 } Hero;
 
@@ -62,4 +63,3 @@ typedef struct Map
     /* Tableau à double dimension représentant la map de tiles */
     int tile[MAX_MAP_Y][MAX_MAP_X];
 } Map;
-
