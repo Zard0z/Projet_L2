@@ -37,6 +37,9 @@ typedef struct GameObject
     /* Variables utiles pour la gestion des collisions et le temps de réaction de la mort*/
     int onGround, timerMort;
     float dirX, dirY;
+    int saveX, saveY;
+
+    //Variable pour le double saut
     int jump;
 
 } GameObject;

@@ -7,6 +7,6 @@ extern Map map;
 
 /* Prototype des fonctions externes que nous allons utiliser ensuite */
 extern SDL_Surface *loadImage(char *name);
-
 extern void centerScrollingOnPlayer(void);
 extern void mapCollision(GameObject *entity);
+extern void loadMap(char *name);

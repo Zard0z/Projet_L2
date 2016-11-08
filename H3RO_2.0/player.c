@@ -29,6 +29,9 @@ void initializePlayer(void)
 
     //Nombre de monstres (à déplacer plus tard dans initialzeGame())
     jeu.nombreMonstres = 0;
+
+    //On recharge la map
+    loadMap("map/map1.txt");
 }
 
 
