@@ -45,9 +45,18 @@ void draw(void)
 
     /* Affiche le fond (background) aux coordonnées (0,0) */
     drawImage(map.background, 0, 0);
-    
+
     /* Affiche la map de tiles */
-    drawMap();
+     drawMap();
+
+    /* Affiche le joueur */
+    drawAnimatedEntity(&player);
+
+    /* Affiche les monstres */
+    for(i = 0 ; i < jeu.nombreMonstres ; i++)
+    {
+        drawAnimatedEntity(&monster[i]);
+    }
 
     /* Affiche l'écran */
     SDL_Flip(jeu.screen);
@@ -56,7 +65,6 @@ void draw(void)
     SDL_Delay(1);
 
 }
-
 
 SDL_Surface *loadImage(char *name)
 {
@@ -73,6 +81,9 @@ SDL_Surface *loadImage(char *name)
         return NULL;
     }
 
+    /* Ajoute la transparence à l'image temporaire en accord avec les defines TRANS_R, G, B */
+
+    SDL_SetColorKey(temp, (SDL_SRCCOLORKEY | SDL_RLEACCEL), SDL_MapRGB(temp->format, TRANS_R, TRANS_G,    TRANS_B));
 
     /* Convertit l'image au format de l'écran (screen) pour un blit plus rapide */
 
@@ -92,10 +103,7 @@ SDL_Surface *loadImage(char *name)
 
     return image;
 
-
-    }
-
-
+}
 
 void delay(unsigned int frameLimit)
 {

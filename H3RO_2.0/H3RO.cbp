@@ -67,6 +67,10 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="map.h" />
+		<Unit filename="monster.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="monster.h" />
 		<Unit filename="player.c">
 			<Option compilerVar="CC" />
 		</Unit>

@@ -19,7 +19,7 @@ typedef struct Input
 
 /* Structure pour gérer notre héros */
 
-typedef struct Hero
+typedef struct GameObject
 {
     //Sprite du héros (pas d'animation pour l'instant)
     SDL_Surface *sprite;
@@ -39,13 +39,14 @@ typedef struct Hero
     float dirX, dirY;
     int jump;
 
-} Hero;
+} GameObject;
 
 /* Structure pour gérer le niveau (à compléter plus tard) */
 
 typedef struct Gestion
 {
     SDL_Surface *screen;
+    int nombreMonstres;
 } Gestion;
 
  /* Structure pour gérer la map à afficher (à compléter plus tard) */

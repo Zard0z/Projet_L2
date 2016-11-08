@@ -19,7 +19,7 @@ typedef struct Input
 
 /* Structure pour gérer notre héros */
 
-typedef struct Hero
+typedef struct GameObject
 {
     //Sprite du héros (pas d'animation pour l'instant)
     SDL_Surface *sprite;
@@ -37,14 +37,16 @@ typedef struct Hero
     /* Variables utiles pour la gestion des collisions et le temps de réaction de la mort*/
     int onGround, timerMort;
     float dirX, dirY;
+    int jump;
 
-} Hero;
+} GameObject;
 
 /* Structure pour gérer le niveau (à compléter plus tard) */
 
 typedef struct Gestion
 {
     SDL_Surface *screen;
+    int nombreMonstres;
 } Gestion;
 
  /* Structure pour gérer la map à afficher (à compléter plus tard) */
@@ -62,5 +64,3 @@ typedef struct Map
     /* Tableau à double dimension représentant la map de tiles */
     int tile[MAX_MAP_Y][MAX_MAP_X];
 } Map;
-
-int jump;

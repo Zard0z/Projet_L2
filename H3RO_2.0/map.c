@@ -116,6 +116,20 @@ void drawMap(void)
 
         for (x = x1; x < x2; x += TILE_SIZE)
         {
+            //Si la tile à dessiner n'est pas une tile vide
+            if (map.tile[mapY][mapX] != 0)
+            {
+                /*On teste si c'est une tile monstre (tile numéro 10) */
+                if (map.tile[mapY][mapX] == 10)
+                {
+                    //On initialise un monstre en envoyant les coordonnées de la tile
+                    initializeMonster(mapX * TILE_SIZE, mapY * TILE_SIZE);
+
+                    //Et on efface cette tile de notre tableau pour éviter un spawn de monstres
+                    //infini !
+                    map.tile[mapY][mapX] = 0;
+                }
+            }
 
             /* Suivant le numéro de notre tile, on découpe le tileset */
 
@@ -141,7 +155,7 @@ void drawMap(void)
     }
 }
 
-void mapCollision(Hero *entity)
+void mapCollision(GameObject *entity)
  {
 
     int i, x1, x2, y1, y2;

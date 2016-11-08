@@ -42,7 +42,7 @@ void drawTile(SDL_Surface *image, int destx, int desty, int srcx, int srcy)
 
 void draw(void)
 {
-
+    int i;
     /* Affiche le fond (background) aux coordonnées (0,0) */
     drawImage(map.background, 0, 0);
 
@@ -50,7 +50,13 @@ void draw(void)
      drawMap();
 
     /* Affiche le joueur */
-    drawanimatedplayer();
+    drawAnimatedEntity(&player);
+
+    /* Affiche les monstres */
+    for(i = 0 ; i < jeu.nombreMonstres ; i++)
+    {
+        drawAnimatedEntity(&monster[i]);
+    }
 
     /* Affiche l'écran */
     SDL_Flip(jeu.screen);
