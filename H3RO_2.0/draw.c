@@ -58,6 +58,9 @@ void draw(void)
         drawAnimatedEntity(&monster[i]);
     }
 
+    //On affiche le HUD par-dessus tout le reste
+    drawHud();
+
     /* Affiche l'écran */
     SDL_Flip(jeu.screen);
 
@@ -126,4 +129,23 @@ void delay(unsigned int frameLimit)
     {
         SDL_Delay(frameLimit - ticks);
     }
+}
+
+  void drawHud(void)
+{
+    //On crée une variable qui contiendra notre texte (jusqu'à 200 caractères, y'a de la marge ;) ).
+    char text[200];
+
+    /* Affiche le nombre de vies en bas à droite */
+    drawImage(jeu.HUD_vie, 900, 600);
+    //Pour afficher le nombre de vies, on formate notre string pour qu'il prenne la valeur de la variable
+    sprintf(text, "%d", jeu.vies);
+    //Puis on utilise notre fonction créée précédemment
+    drawString(text, 970, 610, font);
+
+    /* Affiche le nombre d'étoiles en haut à gauche */
+    drawImage(jeu.HUD_etoiles, 60, 60);
+    sprintf(text, "%d", jeu.etoiles);
+    drawString(text, 100, 57, font);
+
 }

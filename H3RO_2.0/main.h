@@ -21,3 +21,6 @@ Gestion jeu;
 Map map;
 GameObject player;
 GameObject monster[MONSTRES_MAX];
+
+/* Déclaration de notre police de caractères */
+TTF_Font *font;

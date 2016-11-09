@@ -50,6 +50,11 @@ typedef struct Gestion
 {
     SDL_Surface *screen;
     int nombreMonstres;
+
+    //HUD
+    SDL_Surface *HUD_vie, *HUD_etoiles;
+    int vies, etoiles;
+
 } Gestion;
 
  /* Structure pour gérer la map à afficher (à compléter plus tard) */
@@ -57,6 +62,7 @@ typedef struct Gestion
 typedef struct Map
 {
     SDL_Surface *background, *tileSet;
+    SDL_Surface *tileSetB;
 
     /* Coordonnées de début, lorsqu'on doit dessiner la map */
     int startX, startY;
@@ -66,4 +72,8 @@ typedef struct Map
 
     /* Tableau à double dimension représentant la map de tiles */
     int tile[MAX_MAP_Y][MAX_MAP_X];
+
+    /* Timer et numéro du tileset à afficher pour animer la map */
+    int mapTimer, tileSetNumber;
+
 } Map;

@@ -49,3 +49,17 @@ void drawAnimatedEntity(GameObject *entity)
     SDL_BlitSurface(entity->sprite, &src, jeu.screen, &dest);
 
 }
+
+void changeAnimation(GameObject *entity, char *name)
+{
+    //On libère l'animation précédente
+    if (entity->sprite != NULL)
+    {
+        SDL_FreeSurface(entity->sprite);
+    }
+    //On charge la nouvelle
+    entity->sprite = loadImage(name);
+    //On réinitialise la frame et le timer
+    entity->frameNumber = 0;
+    entity->frameTimer = TIME_BETWEEN_2_FRAMES;
+}

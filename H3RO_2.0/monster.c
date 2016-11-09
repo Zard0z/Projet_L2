@@ -61,12 +61,12 @@ void updateMonsters(void)
                 if (monster[i].direction == LEFT)
                 {
                     monster[i].direction = RIGHT;
-                    monster[i].sprite = loadImage("graphics/monster1right.png");
+                    changeAnimation(&monster[i], "graphics/monster1right.png");
                 }
                 else
                 {
                     monster[i].direction = LEFT;
-                    monster[i].sprite = loadImage("graphics/monster1.png");
+                    changeAnimation(&monster[i], "graphics/monster1.png");
                 }
 
             }
@@ -109,6 +109,11 @@ void updateMonsters(void)
             rétrécit le tableau d'une case (on ne peut pas laisser de case vide) */
             if (monster[i].timerMort == 0)
             {
+                /* Libère le sprite */
+                if (monster[i].sprite != NULL)
+                {
+                    SDL_FreeSurface(monster[i].sprite);
+                }
                 monster[i] = monster[jeu.nombreMonstres-1];
                 jeu.nombreMonstres--;
             }

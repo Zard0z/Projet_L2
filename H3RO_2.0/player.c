@@ -5,15 +5,16 @@ void initializePlayer(void)
 {
 
     /* Charge le sprite de notre héros */
-    player.sprite = loadImage("graphics/walkright.png");
+    changeAnimation(&player, "graphics/walkright.png");
+    //player.sprite = loadImage("graphics/walkright.png");
 
     //Indique l'état et la direction de notre héros
     player.direction = RIGHT;
     player.etat = IDLE;
 
     //Réinitialise le timer de l'animation et la frame
-    player.frameNumber = 0;
-    player.frameTimer = TIME_BETWEEN_2_FRAMES;
+    //player.frameNumber = 0;
+    //player.frameTimer = TIME_BETWEEN_2_FRAMES;
 
      /* Coordonnées de démarrage de notre héros */
     player.x = 0;
@@ -33,7 +34,6 @@ void initializePlayer(void)
     //On recharge la map
     loadMap("map/map1.txt");
 }
-
 
 void updatePlayer(void)
 {
@@ -70,8 +70,7 @@ void updatePlayer(void)
         if(player.etat != WALK_LEFT && player.onGround == 1)
         {
             player.etat = WALK_LEFT;
-            player.sprite = loadImage("graphics/walkleft.png");
-            player.frameNumber = 0;
+            changeAnimation(&player, "graphics/walkleft.png");
         }
     }
 
@@ -83,8 +82,8 @@ void updatePlayer(void)
         if(player.etat != WALK_RIGHT && player.onGround == 1)
         {
             player.etat = WALK_RIGHT;
-            player.sprite = loadImage("graphics/walkright.png");
-            player.frameNumber = 0;
+            changeAnimation(&player, "graphics/walkright.png");
+
         }
     }
 
@@ -100,13 +99,11 @@ void updatePlayer(void)
             //On change l'animation selon la direction
             if(player.direction == LEFT)
             {
-                player.sprite = loadImage("graphics/IdleLeft.png");
-                player.frameNumber = 0;
+                changeAnimation(&player, "graphics/IdleLeft.png");
             }
             else
             {
-                player.sprite = loadImage("graphics/IdleRight.png");
-                player.frameNumber = 0;
+                changeAnimation(&player, "graphics/IdleRight.png");
             }
 
         }
@@ -147,14 +144,12 @@ void updatePlayer(void)
         if(player.direction == RIGHT && player.etat != JUMP_RIGHT)
         {
             player.etat = JUMP_RIGHT;
-            player.sprite = loadImage("graphics/JumpRight.png");
-            player.frameNumber = 0;
+            changeAnimation(&player, "graphics/JumpRight.png");
         }
         else if(player.direction == LEFT && player.etat != JUMP_LEFT)
         {
             player.etat = JUMP_LEFT;
-            player.sprite = loadImage("graphics/JumpLeft.png");
-            player.frameNumber = 0;
+            changeAnimation(&player, "graphics/JumpLeft.png");
         }
 
     }
@@ -178,6 +173,8 @@ void updatePlayer(void)
         if (player.timerMort == 0)
         {
             /* Si on est mort */
+            jeu.vies--;
+            if(jeu.vies < 0) jeu.vies = 3;
             initializePlayer();
         }
     }
@@ -215,3 +212,16 @@ void updatePlayer(void)
         map.startY = map.maxY - SCREEN_HEIGHT;
     }
  }
+
+void getItem(void)
+{
+    //On incrémente le compteur Etoile
+    jeu.etoiles++;
+
+    //On teste s'il y a 100 étoiles : on remet le compteur à 0 et on rajoute une vie ;)
+    if ( jeu.etoiles >= 100 )
+    {
+        jeu.etoiles = 0;
+        jeu.vies++;
+    }
+}
