@@ -48,7 +48,7 @@
 ///Constantes définissant la gravité et la vitesse max de chute
 #define GRAVITY_SPEED 0.6
 #define MAX_FALL_SPEED 10
-#define JUMP_HEIGHT 10
+#define JUMP_HEIGHT 12
 
 ///Nombre max de monstres à l'écran
 #define MONSTRES_MAX 50
