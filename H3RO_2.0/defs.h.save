@@ -52,3 +52,11 @@
 
 ///Nombre max de monstres à l'écran
 #define MONSTRES_MAX 50
+
+enum
+{
+    BUMPER,
+    DESTROY,
+    JUMP,
+    STAR
+};

@@ -58,6 +58,9 @@ typedef struct Gestion
     //Sons
     Mix_Music  *musique;
 
+    //Sounds Fx
+    Mix_Chunk  *bumper_sound, *destroy_sound, *jump_sound, *star_sound;
+
 } Gestion;
 
  /* Structure pour gérer la map à afficher (à compléter plus tard) */

@@ -121,12 +121,14 @@ void updatePlayer(void)
             player.dirY = -JUMP_HEIGHT;
             player.onGround = 0;
             player.jump = 1;
+            playSoundFx(JUMP);
         }
         /* Si on est en saut 1, on peut faire un deuxième bond et on remet jump1 à 0 */
         else if (player.jump == 1)
         {
             player.dirY = -JUMP_HEIGHT;
             player.jump = 0;
+            playSoundFx(JUMP);
         }
         //On remet les input à 0 par sécurité
         input.jump = 0;
@@ -181,8 +183,8 @@ void updatePlayer(void)
 
  }
 
- void centerScrollingOnPlayer(void)
- {
+void centerScrollingOnPlayer(void)
+{
     //On définit les coordonnées du début de l'affichage de la map par rapport à celles
     //du joueur.
     //Pour centrer le joueur, la map doit donc s'afficher à un demi-écran avant la position
@@ -211,12 +213,13 @@ void updatePlayer(void)
     {
         map.startY = map.maxY - SCREEN_HEIGHT;
     }
- }
+}
 
 void getItem(void)
 {
     //On incrémente le compteur Etoile
     jeu.etoiles++;
+    playSoundFx(STAR);
 
     //On teste s'il y a 100 étoiles : on remet le compteur à 0 et on rajoute une vie ;)
     if ( jeu.etoiles >= 100 )

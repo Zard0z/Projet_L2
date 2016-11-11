@@ -11,3 +11,4 @@ extern void mapCollision(GameObject *entity);
 extern int collide(GameObject *player, GameObject *monster);
 extern int checkFall(GameObject monster);
 extern void changeAnimation(GameObject *entity, char *name);
+extern void playSoundFx(int type);

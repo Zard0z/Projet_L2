@@ -70,6 +70,11 @@ void init(char *title)
         exit(1);
     }
 
+    //Baise le son de la musique
+    Mix_VolumeMusic(MIX_MAX_VOLUME/10);
+    //Baisse le son dui canal des effets sonnores ingame
+    Mix_Volume(-1, MIX_MAX_VOLUME/10);
+
     /* Définit le nombre de channels à mixer */
     Mix_AllocateChannels(32);
 }
@@ -99,10 +104,12 @@ void loadGame(void)
 
     //On charge la musique
     loadSong("music/Tezla - Music Is The Drug (Original Mix).mp3");
+
+    /* On charge les sounds Fx */
+    loadSound();
 }
 
 /* Fonction qui quitte le jeu proprement */
-
 void cleanup()
 {
     int i;
@@ -150,6 +157,9 @@ void cleanup()
     /* On libère la chanson */
     if ( jeu.musique != NULL )
         Mix_FreeMusic(jeu.musique);
+
+    //On libère les sons
+    freeSound();
 
     // Quitte SDL_Mixer et décharge la mémoire
     Mix_CloseAudio();

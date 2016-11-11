@@ -54,8 +54,12 @@ typedef struct Gestion
     //HUD
     SDL_Surface *HUD_vie, *HUD_etoiles;
     int vies, etoiles;
+
+    //Sons
+    Mix_Music  *musique;
     
-    
+    //Sounds Fx
+    Mix_Chunk  *bumper_sound, *destroy_sound, *jump_sound, *star_sound;
 
 } Gestion;
 

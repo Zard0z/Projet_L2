@@ -92,11 +92,13 @@ void updateMonsters(void)
             {
                 //On met le timer à 1 pour tuer le joueur intantanément
                 player.timerMort = 1;
+                playSoundFx(DESTROY);
             }
             else if (collide(&player, &monster[i]) == 2)
             {
                 //On met le timer à 1 pour tuer le monstre intantanément
                 monster[i].timerMort = 1;
+                playSoundFx(DESTROY);
             }
           }
 

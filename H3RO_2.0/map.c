@@ -351,6 +351,7 @@ void mapCollision(GameObject *entity)
                       entity->dirY = -20;
                     //On indique au jeu qu'il a atterri pour réinitialiser le double saut
                     entity->onGround = 1;
+                    playSoundFx(BUMPER);
                 }
 
                 else if (map.tile[y2][x1] > BLANK_TILE || map.tile[y2][x2] > BLANK_TILE)
