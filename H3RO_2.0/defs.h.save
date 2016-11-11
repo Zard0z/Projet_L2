@@ -4,6 +4,8 @@
 #include <math.h>
 #include <SDL/SDL.h>
 #include <SDL/SDL_image.h>
+#include <SDL/SDL_ttf.h>
+#include <SDL/SDL_mixer.h>
 
 #define SCREEN_WIDTH 1080
 #define SCREEN_HEIGHT 720
@@ -26,7 +28,7 @@
 #define PLAYER_HEIGTH 80
 
 /* Constantes pour l'animation  */
-#define TIME_BETWEEN_2_FRAMES 8
+#define TIME_BETWEEN_2_FRAMES 6
 
 ///Vitesse de déplacement en pixels du sprite POUR LA COKE!!!!!!!!!
 #define PLAYER_SPEED 4
@@ -43,7 +45,10 @@
 // Constante définissant le seuil entre les tiles traversables (blank) et les tiles solides
 #define BLANK_TILE 5
 
-//Constantes définissant la gravité et la vitesse max de chute
+///Constantes définissant la gravité et la vitesse max de chute
 #define GRAVITY_SPEED 0.6
 #define MAX_FALL_SPEED 10
 #define JUMP_HEIGHT 10
+
+///Nombre max de monstres à l'écran
+#define MONSTRES_MAX 50

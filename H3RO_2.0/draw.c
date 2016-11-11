@@ -47,7 +47,7 @@ void draw(void)
     drawImage(map.background, 0, 0);
 
     /* Affiche la map de tiles */
-     drawMap();
+    drawMap();
 
     /* Affiche le joueur */
     drawAnimatedEntity(&player);
@@ -138,8 +138,10 @@ void delay(unsigned int frameLimit)
 
     /* Affiche le nombre de vies en bas à droite */
     drawImage(jeu.HUD_vie, 900, 600);
+
     //Pour afficher le nombre de vies, on formate notre string pour qu'il prenne la valeur de la variable
     sprintf(text, "%d", jeu.vies);
+
     //Puis on utilise notre fonction créée précédemment
     drawString(text, 970, 610, font);
 

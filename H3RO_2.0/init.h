@@ -3,9 +3,9 @@
 /* Prototypes des fonctions utilisées */
 extern SDL_Surface *loadImage(char *name);
 extern void loadMap(char *name);
-
 extern void closeFont(TTF_Font *font);
 extern TTF_Font *loadFont(char *, int);
+extern void loadSong(char filename[200] );
 
 extern Gestion jeu;
 extern Map map;

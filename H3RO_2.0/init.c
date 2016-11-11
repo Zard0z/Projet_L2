@@ -51,8 +51,27 @@ void init(char *title)
     }
 
     /* Charge la police en 32 points (taille) */
-
     font = loadFont("font/GenBasB.ttf", 32);
+
+     /* Initialise SDL_Mixer */
+    int flags=MIX_INIT_MP3;
+    int initted=Mix_Init(flags);
+    if( (initted & flags) != flags)
+    {
+        printf("Mix_Init: Failed to init SDL_Mixer\n");
+        printf("Mix_Init: %s\n", Mix_GetError());
+        exit(1);
+    }
+
+    /* open 44.1KHz, signed 16bit, system byte order,
+           stereo audio, using 1024 byte chunks */
+    if(Mix_OpenAudio(44100, MIX_DEFAULT_FORMAT, 2, 1024)==-1) {
+        printf("Mix_OpenAudio: %s\n", Mix_GetError());
+        exit(1);
+    }
+
+    /* Définit le nombre de channels à mixer */
+    Mix_AllocateChannels(32);
 }
 
 void loadGame(void)
@@ -77,6 +96,9 @@ void loadGame(void)
     /* On charge le HUD */
     jeu.HUD_vie = loadImage("graphics/life.png");
     jeu.HUD_etoiles = loadImage("graphics/stars.png");
+
+    //On charge la musique
+    loadSong("music/Tezla - Music Is The Drug (Original Mix).mp3");
 }
 
 /* Fonction qui quitte le jeu proprement */
@@ -124,6 +146,14 @@ void cleanup()
     {
         SDL_FreeSurface(jeu.HUD_vie);
     }
+
+    /* On libère la chanson */
+    if ( jeu.musique != NULL )
+        Mix_FreeMusic(jeu.musique);
+
+    // Quitte SDL_Mixer et décharge la mémoire
+    Mix_CloseAudio();
+    Mix_Quit();
 
     /* Close the font */
     closeFont(font);

@@ -79,6 +79,10 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="player.h" />
+		<Unit filename="sounds.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="sounds.h" />
 		<Unit filename="structs.h" />
 		<Extensions>
 			<code_completion />

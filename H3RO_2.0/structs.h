@@ -55,6 +55,9 @@ typedef struct Gestion
     SDL_Surface *HUD_vie, *HUD_etoiles;
     int vies, etoiles;
 
+    //Sons
+    Mix_Music  *musique;
+
 } Gestion;
 
  /* Structure pour gérer la map à afficher (à compléter plus tard) */
