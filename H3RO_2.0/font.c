@@ -16,7 +16,6 @@ TTF_Font *loadFont(char *name, int size)
     return font;
 }
 
-
 void closeFont(TTF_Font *font)
 {
     /* Ferme la police quand on n'en a plus besoin (avant de quitter) */
@@ -26,7 +25,6 @@ void closeFont(TTF_Font *font)
         TTF_CloseFont(font);
     }
 }
-
 
 void drawString(char *text, int x, int y, TTF_Font *font)
 {

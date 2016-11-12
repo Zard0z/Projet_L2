@@ -52,37 +52,33 @@ void drawStartMenu(void)
 
     drawImage(jeu.fondMenuStart, 0, 0);
 
-    //Le titre
-    sprintf(text, "H3RO");
-    drawString(text, 473, 50, font);
-
     //Si l'option n'est pas en surbrillance, on l'affiche normalement, sinon on rajoute ">"
     if(jeu.choice != 0)
     {
-        sprintf(text, "START");
-        drawString(text, 473, 240, font);
+        sprintf(text, "  START");
+        drawString(text, 440, 320, font);
     }
     if(jeu.choice != 1)
     {
-        sprintf(text, "QUIT");
-        drawString(text, 473, 320, font);
+        sprintf(text, "  QUIT");
+        drawString(text, 440, 380, font);
     }
 
      //Si l'option est en surbrillance, on rajoute ">"
     if(jeu.choice == 0)
     {
-        sprintf(text, "> START");
-        drawString(text, 450, 240, font);
+        sprintf(text, "- START");
+        drawString(text, 420, 320, font);
     }
     else if(jeu.choice == 1)
     {
-        sprintf(text, "> QUIT");
-        drawString(text, 450, 320, font);
+        sprintf(text, "- QUIT");
+        drawString(text, 420, 380, font);
     }
 
     //Le nom du studio
     sprintf(text, "TEAM GHB, 2016");
-    drawString(text, 400, 500, font);
+    drawString(text, 350, 500, font);
 
 
 }
@@ -98,7 +94,6 @@ void updatePauseMenu(void)
     }
 
 }
-
 
 void drawPauseMenu(void)
 {

@@ -14,6 +14,9 @@ void init(char *title)
         exit(1);
     }
 
+    /* On charge l'icone de la fenêtre */
+
+    SDL_WM_SetIcon(SDL_LoadBMP("graphics/icone.bmp"), NULL);
 
      /* On crée la fenêtre, représentée par le pointeur jeu.screen en utilisant la largeur et la
      hauteur définies dans les defines (defs.h). On utilise aussi la mémoire vidéo
@@ -36,13 +39,9 @@ void init(char *title)
 
     SDL_WM_SetCaption(title, NULL);
 
-    /* On charge l'icone de la fenêtre */
-
-    SDL_WM_SetIcon(SDL_LoadBMP("graphics/icone.bmp"), NULL);
-
     /* On cache le curseur de la souris */
 
-    SDL_ShowCursor(SDL_DISABLE);
+    ///SDL_ShowCursor(SDL_DISABLE);
 
     /* Initialise SDL_TTF */
 
@@ -54,7 +53,7 @@ void init(char *title)
     }
 
     /* Charge la police en 32 points (taille) */
-    font = loadFont("font/GenBasB.ttf", 32);
+    font = loadFont("font/Star Force TTF.ttf", 32);
 
      /* Initialise SDL_Mixer */
     int flags=MIX_INIT_MP3;
@@ -87,7 +86,7 @@ void loadGame(void)
     /* Charge l'image du fond et le tileset */
     map.background = loadImage("graphics/background.png");
 
-    jeu.fondMenuStart = loadImage("graphics/fondMenuStart.jpg");
+    jeu.fondMenuStart = loadImage("graphics/fondMenuStart.png");
 
     //On commence au premier niveau
     jeu.level = 1;
