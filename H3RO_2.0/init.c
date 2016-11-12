@@ -81,18 +81,16 @@ void init(char *title)
 
 void loadGame(void)
 {
-    /* Charge l'image du fond */
+    /* Charge l'image du fond et le tileset */
     map.background = loadImage("graphics/background.png");
 
-    map.tileSet = loadImage("graphics/tileset.png");
-
-    map.tileSetB = loadImage("graphics/tilesetB.png");
+    //On commence au premier niveau
+    jeu.level = 1;
+    changeLevel();
 
     //On initialise le timer
-    map.mapTimer = TIME_BETWEEN_2_FRAMES*3;
-    map.tileSetNumber = 0;
-
-    loadMap("map/map1.txt");
+     map.mapTimer = TIME_BETWEEN_2_FRAMES*3;
+     map.tileSetNumber = 0;
 
     /* On initialise les variables du jeu */
     jeu.vies = 3;
@@ -107,6 +105,7 @@ void loadGame(void)
 
     /* On charge les sounds Fx */
     loadSound();
+
 }
 
 /* Fonction qui quitte le jeu proprement */

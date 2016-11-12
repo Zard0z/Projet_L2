@@ -53,7 +53,16 @@
                     case SDLK_DELETE:
                         input.reinit = 1;
                     break;
+                    
+                    /*change de niveau*/
+                    case SDLK_F1:
+                        input.levelup = 1;
+                    break;
 
+                    case SDLK_F2:
+                        input.leveldown = 1;
+                    break;
+                    
                     default:
                     break;
                 }
@@ -156,6 +165,8 @@
 
     cursor.x = input.mouseX;
     cursor.y = input.mouseY;
+    
+    char file[120];
 
     /* Gestion de notre scrolling du chapitre précédent */
 
@@ -197,6 +208,28 @@
         {
             map.startY = map.maxY - SCREEN_HEIGHT;
         }
+    }
+    
+     //Gestion du passage d'une map à l'autre
+
+    if (input.levelup == 1)
+    {
+        jeu.level++;
+        if (jeu.level > LEVEL_MAX )
+            jeu.level = 1;
+        loadGame();
+
+        input.levelup = 0;
+    }
+
+    if (input.leveldown == 1)
+    {
+        jeu.level--;
+        if (jeu.level < 1 )
+            jeu.level = LEVEL_MAX;
+        loadGame();
+
+        input.leveldown = 0;
     }
 
     /* Gestion de la copie de tile :

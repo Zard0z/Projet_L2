@@ -176,7 +176,7 @@ void drawMap(void)
 }
 
 void mapCollision(GameObject *entity)
- {
+{
 
     int i, x1, x2, y1, y2;
 
@@ -398,6 +398,193 @@ void mapCollision(GameObject *entity)
 
                     entity->dirY = 0;
 
+                }
+
+            }
+        }
+
+        //On teste la largeur du sprite (même technique que pour la hauteur précédemment)
+        if (i == entity->w)
+        {
+            break;
+        }
+
+        i += TILE_SIZE;
+
+        if (i > entity->w)
+        {
+            i = entity->w;
+        }
+    }
+
+    /* Maintenant, on applique les vecteurs de mouvement si le sprite n'est pas bloqué */
+    entity->x += entity->dirX;
+    entity->y += entity->dirY;
+
+    //Et on contraint son déplacement aux limites de l'écran, comme avant.
+    if (entity->x < 0)
+    {
+        entity->x = 0;
+    }
+
+    else if (entity->x + entity->w >= map.maxX)
+    {
+        //Si on touche le bord droit de l'écran, on passe au niveau sup
+        jeu.level++;
+
+        //Si on dépasse le niveau max, on annule et on limite le déplacement du joueur
+        if(jeu.level > LEVEL_MAX)
+        {
+            jeu.level = LEVEL_MAX;
+            entity->x = map.maxX - entity->w - 1;
+        }
+        //Sion, on passe au niveau sup, on charge la nouvelle map et on réinitialise le joueur
+        else
+        {
+            changeLevel();
+            initializePlayer();
+        }
+    }
+
+    //Maintenant, s'il sort de l'écran par le bas (chute dans un trou sans fond), on lance le timer
+    //qui gère sa mort et sa réinitialisation (plus tard on gèrera aussi les vies).
+    if (entity->y > map.maxY)
+    {
+        entity->timerMort = 60;
+    }
+}
+
+void changeLevel(void)
+{
+
+    char file[200];
+
+    /* Charge la map depuis le fichier */
+    sprintf(file, "map/map%d.txt", jeu.level );
+    loadMap(file);
+
+    //Charge le tileset
+    if(map.tileSet != NULL)
+    {
+        SDL_FreeSurface(map.tileSet);
+    }
+    if(map.tileSetB != NULL)
+    {
+        SDL_FreeSurface(map.tileSetB);
+    }
+    sprintf(file, "graphics/tileset%d.png", jeu.level );
+    map.tileSet = loadImage(file);
+    sprintf(file, "graphics/tileset%dB.png", jeu.level );
+    map.tileSetB = loadImage(file);
+
+}
+
+void monsterCollisionToMap(GameObject *entity)
+{
+
+    int i, x1, x2, y1, y2;
+
+    entity->onGround = 0;
+
+    if(entity->h > TILE_SIZE)
+        i = TILE_SIZE;
+    else
+        i = entity->h;
+
+    for (;;)
+    {
+        x1 = (entity->x + entity->dirX) / TILE_SIZE;
+        x2 = (entity->x + entity->dirX + entity->w - 1) / TILE_SIZE;
+
+        y1 = (entity->y) / TILE_SIZE;
+        y2 = (entity->y + i - 1) / TILE_SIZE;
+
+        if (x1 >= 0 && x2 < MAX_MAP_X && y1 >= 0 && y2 < MAX_MAP_Y)
+        {
+            //Si on a un mouvement à droite
+            if (entity->dirX > 0)
+            {
+                //On vérifie si les tiles recouvertes sont solides
+                if (map.tile[y1][x2] > BLANK_TILE || map.tile[y2][x2] > BLANK_TILE)
+                {
+                    entity->x = x2 * TILE_SIZE;
+                    entity->x -= entity->w + 1;
+                    entity->dirX = 0;
+
+                }
+
+            }
+
+            //Même chose à gauche
+            else if (entity->dirX < 0)
+            {
+
+                if (map.tile[y1][x1] > BLANK_TILE || map.tile[y2][x1] > BLANK_TILE)
+                {
+                    entity->x = (x1 + 1) * TILE_SIZE;
+                    entity->dirX = 0;
+                }
+
+            }
+
+        }
+
+        //On sort de la boucle si on a testé toutes les tiles le long de la hauteur du sprite.
+        if (i == entity->h)
+        {
+            break;
+        }
+
+        //Sinon, on teste les tiles supérieures en se limitant à la heuteur du sprite.
+        i += TILE_SIZE;
+
+        if (i > entity->h)
+        {
+            i = entity->h;
+        }
+    }
+
+    //On recommence la même chose avec le mouvement vertical (axe des Y)
+    if(entity->w > TILE_SIZE)
+        i = TILE_SIZE;
+    else
+        i = entity->w;
+
+
+    for (;;)
+    {
+        x1 = (entity->x) / TILE_SIZE;
+        x2 = (entity->x + i) / TILE_SIZE;
+
+        y1 = (entity->y + entity->dirY) / TILE_SIZE;
+        y2 = (entity->y + entity->dirY + entity->h) / TILE_SIZE;
+
+        if (x1 >= 0 && x2 < MAX_MAP_X && y1 >= 0 && y2 < MAX_MAP_Y)
+        {
+            if (entity->dirY > 0)
+            {
+
+                /* Déplacement en bas */
+
+                if (map.tile[y2][x1] > BLANK_TILE || map.tile[y2][x2] > BLANK_TILE)
+                {
+                    entity->y = y2 * TILE_SIZE;
+                    entity->y -= entity->h;
+                    entity->dirY = 0;
+                    entity->onGround = 1;
+                }
+
+            }
+
+            else if (entity->dirY < 0)
+            {
+
+                /* Déplacement vers le haut */
+
+                if (map.tile[y1][x1] > BLANK_TILE || map.tile[y1][x2] > BLANK_TILE)
+                {
+                    entity->y = (y1 + 1) * TILE_SIZE;
+                    entity->dirY = 0;
                 }
 
             }

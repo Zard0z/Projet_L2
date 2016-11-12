@@ -50,8 +50,11 @@
 #define MAX_FALL_SPEED 10
 #define JUMP_HEIGHT 12
 
-///Nombre max de monstres à l'écran
+//Nombre max de monstres à l'écran
 #define MONSTRES_MAX 50
+
+//Nombre max de levels
+#define LEVEL_MAX 2
 
 enum
 {

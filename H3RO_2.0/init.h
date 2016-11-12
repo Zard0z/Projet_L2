@@ -8,6 +8,7 @@ extern TTF_Font *loadFont(char *, int);
 extern void loadSong(char filename[200] );
 extern void loadSound(void);
 extern void freeSound(void);
+extern void changeLevel(void);
 
 extern Gestion jeu;
 extern Map map;

@@ -82,9 +82,8 @@ void updateMonsters(void)
             //avant que mapCollision ne les modifie.
             monster[i].saveX = monster[i].x;
 
-
             //On détecte les collisions avec la map comme pour le joueur
-            mapCollision(&monster[i]);
+            monsterCollisionToMap(&monster[i]);
 
             //On détecte les collisions avec le joueur
             //Si c'est égal à 1, on tue le joueur... Sniff...

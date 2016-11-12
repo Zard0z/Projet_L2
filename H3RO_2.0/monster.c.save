@@ -82,9 +82,8 @@ void updateMonsters(void)
             //avant que mapCollision ne les modifie.
             monster[i].saveX = monster[i].x;
 
-
             //On détecte les collisions avec la map comme pour le joueur
-            mapCollision(&monster[i]);
+            monsterCollisionToMap(&monster[i]);
 
             //On détecte les collisions avec le joueur
             //Si c'est égal à 1, on tue le joueur... Sniff...
@@ -92,11 +91,13 @@ void updateMonsters(void)
             {
                 //On met le timer à 1 pour tuer le joueur intantanément
                 player.timerMort = 1;
+                playSoundFx(DESTROY);
             }
             else if (collide(&player, &monster[i]) == 2)
             {
                 //On met le timer à 1 pour tuer le monstre intantanément
                 monster[i].timerMort = 1;
+                playSoundFx(DESTROY);
             }
           }
 
@@ -116,7 +117,6 @@ void updateMonsters(void)
                 }
                 monster[i] = monster[jeu.nombreMonstres-1];
                 jeu.nombreMonstres--;
-                playSoundFx(DESTROY);
             }
         }
 

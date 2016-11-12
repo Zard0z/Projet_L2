@@ -26,3 +26,6 @@
 
 /* MAX_TILES = numéro de la dernière tile */
 #define MAX_TILES 10
+
+//Nombre maximum de levels
+#define LEVEL_MAX   2

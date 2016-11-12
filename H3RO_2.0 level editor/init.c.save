@@ -35,7 +35,7 @@ void init(char *title)
     /* On entre le titre de la fenêtre */
 
     SDL_WM_SetCaption(title, NULL);
-
+    
     //On commence par le level 1
     jeu.level = 1;
 

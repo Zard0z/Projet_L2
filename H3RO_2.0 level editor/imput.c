@@ -54,6 +54,15 @@
                         input.reinit = 1;
                     break;
 
+                    /*change de niveau*/
+                    case SDLK_F1:
+                        input.levelup = 1;
+                    break;
+
+                    case SDLK_F2:
+                        input.leveldown = 1;
+                    break;
+
                     default:
                     break;
                 }
@@ -157,6 +166,8 @@
     cursor.x = input.mouseX;
     cursor.y = input.mouseY;
 
+    char file[120];
+
     /* Gestion de notre scrolling du chapitre précédent */
 
      if (input.left == 1)
@@ -197,6 +208,28 @@
         {
             map.startY = map.maxY - SCREEN_HEIGHT;
         }
+    }
+
+     //Gestion du passage d'une map à l'autre
+
+    if (input.levelup == 1)
+    {
+        jeu.level++;
+        if (jeu.level > LEVEL_MAX )
+            jeu.level = 1;
+        loadGame();
+
+        input.levelup = 0;
+    }
+
+    if (input.leveldown == 1)
+    {
+        jeu.level--;
+        if (jeu.level < 1 )
+            jeu.level = LEVEL_MAX;
+        loadGame();
+
+        input.leveldown = 0;
     }
 
     /* Gestion de la copie de tile :
@@ -268,8 +301,9 @@
 
     if (input.reinit == 1)
     {
-        reinitMap("map/map1.txt");
-        loadMap("map/map1.txt");
+        sprintf(file, "map/map%d.txt", jeu.level);
+        reinitMap(file);
+        loadMap(file);
         input.reinit = 0;
     }
 
@@ -277,7 +311,8 @@
 
     if (input.save == 1)
     {
-        saveMap("map/map1.txt");
+        sprintf(file, "map/map%d.txt", jeu.level);
+        saveMap(file);
         input.save = 0;
     }
 
@@ -285,7 +320,8 @@
 
     if (input.load == 1)
     {
-        loadMap("map/map1.txt");
+        sprintf(file, "map/map%d.txt", jeu.level);
+        loadMap(file);
         input.load = 0;
     }
 

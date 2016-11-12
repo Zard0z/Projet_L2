@@ -9,6 +9,7 @@ typedef struct Input
     int left, right, up, down, add, remove;
     int previous, next, load, save, copy, reinit;
     int mouseX, mouseY;
+    int leveldown, levelup;
 } Input;
 
 
@@ -23,6 +24,7 @@ typedef struct Cursor
 typedef struct Gestion
 {
     SDL_Surface *screen;
+    int level;
 } Gestion;
 
  /* Structure pour gérer la map à afficher (à compléter plus tard) */
