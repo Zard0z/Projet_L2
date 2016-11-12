@@ -561,10 +561,10 @@
 1478953703 c:\users\louis\desktop\projet_l2-master\h3ro_2.0\animation.h
 	"structs.h"
 
-1478955758 c:\users\louis\desktop\projet_l2-master\h3ro_2.0\structs.h
+1478959719 c:\users\louis\desktop\projet_l2-master\h3ro_2.0\structs.h
 	"defs.h"
 
-1478956726 c:\users\louis\desktop\projet_l2-master\h3ro_2.0\defs.h
+1478959874 c:\users\louis\desktop\projet_l2-master\h3ro_2.0\defs.h
 	<stdio.h>
 	<string.h>
 	<stdlib.h>
@@ -586,34 +586,34 @@
 1478953703 c:\users\louis\desktop\projet_l2-master\h3ro_2.0\imput.h
 	"structs.h"
 
-1478956480 source:c:\users\louis\desktop\projet_l2-master\h3ro_2.0\init.c
+1478961096 source:c:\users\louis\desktop\projet_l2-master\h3ro_2.0\init.c
 	"init.h"
 
 1478955964 c:\users\louis\desktop\projet_l2-master\h3ro_2.0\init.h
 	"structs.h"
 
-1478953703 source:c:\users\louis\desktop\projet_l2-master\h3ro_2.0\main.c
+1478960063 source:c:\users\louis\desktop\projet_l2-master\h3ro_2.0\main.c
 	"main.h"
 
-1478953703 c:\users\louis\desktop\projet_l2-master\h3ro_2.0\main.h
+1478960096 c:\users\louis\desktop\projet_l2-master\h3ro_2.0\main.h
 	"structs.h"
 
-1478955758 source:c:\users\louis\desktop\projet_l2-master\h3ro_2.0\map.c
+1478956992 source:c:\users\louis\desktop\projet_l2-master\h3ro_2.0\map.c
 	"map.h"
 
-1478955758 c:\users\louis\desktop\projet_l2-master\h3ro_2.0\map.h
+1478956992 c:\users\louis\desktop\projet_l2-master\h3ro_2.0\map.h
 	"structs.h"
 
-1478956007 source:c:\users\louis\desktop\projet_l2-master\h3ro_2.0\player.c
+1478960181 source:c:\users\louis\desktop\projet_l2-master\h3ro_2.0\player.c
 	"player.h"
 
 1478956037 c:\users\louis\desktop\projet_l2-master\h3ro_2.0\player.h
 	"structs.h"
 
-1478953703 source:c:\users\louis\desktop\projet_l2-master\h3ro_2.0\monster.c
+1478956992 source:c:\users\louis\desktop\projet_l2-master\h3ro_2.0\monster.c
 	"monster.h"
 
-1478953703 c:\users\louis\desktop\projet_l2-master\h3ro_2.0\monster.h
+1478956992 c:\users\louis\desktop\projet_l2-master\h3ro_2.0\monster.h
 	"structs.h"
 
 1478711774 source:e:\prog\l2\projet_l2-master\h3ro_2.0\animation.c
@@ -709,5 +709,11 @@
 	"sounds.h"
 
 1478953703 c:\users\louis\desktop\projet_l2-master\h3ro_2.0\sounds.h
+	"structs.h"
+
+1478960466 source:c:\users\louis\desktop\projet_l2-master\h3ro_2.0\menu.c
+	"menu.h"
+
+1478958909 c:\users\louis\desktop\projet_l2-master\h3ro_2.0\menu.h
 	"structs.h"
 

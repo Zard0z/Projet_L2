@@ -3,7 +3,7 @@
 int main( int argc, char *argv[ ] )
 {
     unsigned int frameLimit = SDL_GetTicks() + 16;
-    int go;
+    int go, i;
 
     /* Initialisation de la SDL dans une fonction séparée (voir après) */
     init("H3RO");
@@ -22,25 +22,63 @@ int main( int argc, char *argv[ ] )
 
     /* Boucle infinie, principale, du jeu */
 
-    while (go == 1)
+while (go == 1)
     {
-
-        /* On vérifie l'état des entrées (clavier puis plus tard joystick */
+        /* On prend en compte les input (clavier, joystick... */
         getInput();
 
-        /* On affiche tout */
-        draw();
+        //Si on n'est pas dans un menu
+        if(jeu.onMenu == 0)
+        {
+            /* On met à jour le jeu */
+            updatePlayer();
+            updateMonsters();
+        }
+        else
+        {
+            if(jeu.menuType == START)
+                updateStartMenu();
+            else if(jeu.menuType == PAUSE)
+                updatePauseMenu();
+        }
 
-         /* On met à jour le jeu */
-        updatePlayer();
-        updateMonsters();
 
-        /* Gestion des 60 fps ( 60 images pas seconde : soit 1s ->1000ms/60 = 16.6 -> 16
-        On doit donc attendre 16 ms entre chaque image (frame) */
+        //Si on n'est pas dans un menu
+        if(jeu.onMenu == 0)
+        {
+            /* On affiche tout */
+            draw();
+        }
+        else
+        {
+            if(jeu.menuType == START)
+            {
+                drawImage(map.background, 0, 0);
+                drawStartMenu();
+                SDL_Flip(jeu.screen);
+                SDL_Delay(1);
+            }
+            else if(jeu.menuType == PAUSE)
+            {
+                drawImage(map.background, 0, 0);
+                drawMap();
+                drawAnimatedEntity(&player);
+                for(i = 0 ; i < jeu.nombreMonstres ; i++)
+                {
+                    drawAnimatedEntity(&monster[i]);
+                }
+                drawHud();
+                drawPauseMenu();
+                SDL_Flip(jeu.screen);
+                SDL_Delay(1);
+            }
+        }
+
+        /* Gestion des 60 fps (1000ms/60 = 16.6 -> 16 */
         delay(frameLimit);
         frameLimit = SDL_GetTicks() + 16;
-
     }
+
 
     /* Exit */
     exit(0);

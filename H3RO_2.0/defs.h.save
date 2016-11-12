@@ -63,3 +63,9 @@ enum
     JUMP,
     STAR
 };
+
+enum
+{
+    START,
+    PAUSE
+};

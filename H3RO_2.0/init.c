@@ -36,6 +36,9 @@ void init(char *title)
 
     SDL_WM_SetCaption(title, NULL);
 
+    /* On charge l'icone de la fenêtre */
+
+    SDL_WM_SetIcon(SDL_LoadBMP("graphics/icone.bmp"), NULL);
 
     /* On cache le curseur de la souris */
 
@@ -106,6 +109,9 @@ void loadGame(void)
     /* On charge les sounds Fx */
     loadSound();
 
+    //On commence par le menu start
+    jeu.onMenu = 1;
+    jeu.menuType = START;
 }
 
 /* Fonction qui quitte le jeu proprement */
