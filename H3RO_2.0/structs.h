@@ -50,6 +50,7 @@ typedef struct Gestion
 {
     SDL_Surface *screen;
     int nombreMonstres;
+    int level;
 
     //HUD
     SDL_Surface *HUD_vie, *HUD_etoiles;
@@ -60,6 +61,10 @@ typedef struct Gestion
 
     //Sounds Fx
     Mix_Chunk  *bumper_sound, *destroy_sound, *jump_sound, *star_sound;
+
+    //Gestion des menus
+    int onMenu, menuType, choice;
+    SDL_Surface *fondMenuStart;
 
 } Gestion;
 

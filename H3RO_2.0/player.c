@@ -126,6 +126,14 @@ void updatePlayer(void)
         input.jump = 0;
     }
 
+    if(input.enter == 1)
+    {
+        //On met le jeu en pause
+        jeu.onMenu = 1;
+        jeu.menuType = PAUSE;
+        input.enter = 0;
+    }
+
     /* Réactive la possibilité de double saut si on tombe sans sauter */
     if (player.onGround == 1)
         player.jump = 1;
@@ -168,7 +176,12 @@ void updatePlayer(void)
         {
             /* Si on est mort */
             jeu.vies--;
-            if(jeu.vies < 0) jeu.vies = 3;
+            if(jeu.vies < 0)
+            {
+                //On retourne au menu start
+                jeu.onMenu = 1;
+                jeu.menuType = START;
+            }
             initializePlayer();
             changeLevel();
 

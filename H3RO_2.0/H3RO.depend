@@ -561,7 +561,7 @@
 1478953703 c:\users\louis\desktop\projet_l2-master\h3ro_2.0\animation.h
 	"structs.h"
 
-1478959719 c:\users\louis\desktop\projet_l2-master\h3ro_2.0\structs.h
+1478962621 c:\users\louis\desktop\projet_l2-master\h3ro_2.0\structs.h
 	"defs.h"
 
 1478959874 c:\users\louis\desktop\projet_l2-master\h3ro_2.0\defs.h
@@ -574,7 +574,7 @@
 	<SDL/SDL_ttf.h>
 	<SDL/SDL_mixer.h>
 
-1478953703 source:c:\users\louis\desktop\projet_l2-master\h3ro_2.0\draw.c
+1478962144 source:c:\users\louis\desktop\projet_l2-master\h3ro_2.0\draw.c
 	"draw.h"
 
 1478953703 c:\users\louis\desktop\projet_l2-master\h3ro_2.0\draw.h
@@ -586,7 +586,7 @@
 1478953703 c:\users\louis\desktop\projet_l2-master\h3ro_2.0\imput.h
 	"structs.h"
 
-1478961096 source:c:\users\louis\desktop\projet_l2-master\h3ro_2.0\init.c
+1478962711 source:c:\users\louis\desktop\projet_l2-master\h3ro_2.0\init.c
 	"init.h"
 
 1478955964 c:\users\louis\desktop\projet_l2-master\h3ro_2.0\init.h
@@ -711,7 +711,7 @@
 1478953703 c:\users\louis\desktop\projet_l2-master\h3ro_2.0\sounds.h
 	"structs.h"
 
-1478960466 source:c:\users\louis\desktop\projet_l2-master\h3ro_2.0\menu.c
+1478962718 source:c:\users\louis\desktop\projet_l2-master\h3ro_2.0\menu.c
 	"menu.h"
 
 1478958909 c:\users\louis\desktop\projet_l2-master\h3ro_2.0\menu.h

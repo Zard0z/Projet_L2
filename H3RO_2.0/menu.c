@@ -50,6 +50,8 @@ void drawStartMenu(void)
     //On crée une varuiable qui contiendra notre texte
     char text[200];
 
+    drawImage(jeu.fondMenuStart, 0, 0);
+
     //Le titre
     sprintf(text, "H3RO");
     drawString(text, 473, 50, font);

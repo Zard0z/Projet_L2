@@ -131,7 +131,7 @@ void delay(unsigned int frameLimit)
     }
 }
 
-  void drawHud(void)
+void drawHud(void)
 {
     //On crée une variable qui contiendra notre texte (jusqu'à 200 caractères, y'a de la marge ;) ).
     char text[200];

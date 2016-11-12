@@ -4,7 +4,7 @@
 
 void init(char *title)
 {
-    
+
     /* Initialise SDL Video. Si la valeur de retour est inférieure à zéro, la SDL n'a pas pu
      s'initialiser et on quite */
 
@@ -35,11 +35,11 @@ void init(char *title)
     /* On entre le titre de la fenêtre */
 
     SDL_WM_SetCaption(title, NULL);
-    
+
     /* On charge l'icone de la fenêtre */
-    
-    SDL_WM_SetIcon(SDL_LoadBMP("graphics/icone.bmp"), NULL)
-    
+
+    SDL_WM_SetIcon(SDL_LoadBMP("graphics/icone.bmp"), NULL);
+
     /* On cache le curseur de la souris */
 
     SDL_ShowCursor(SDL_DISABLE);
@@ -86,6 +86,8 @@ void loadGame(void)
 {
     /* Charge l'image du fond et le tileset */
     map.background = loadImage("graphics/background.png");
+    
+    Gestion.fondMenuStart = loadImage("graphics/fondMenuStart.jpg");
 
     //On commence au premier niveau
     jeu.level = 1;

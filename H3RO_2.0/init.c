@@ -87,6 +87,8 @@ void loadGame(void)
     /* Charge l'image du fond et le tileset */
     map.background = loadImage("graphics/background.png");
 
+    jeu.fondMenuStart = loadImage("graphics/fondMenuStart.jpg");
+
     //On commence au premier niveau
     jeu.level = 1;
     changeLevel();
@@ -121,6 +123,11 @@ void cleanup()
     if (map.background != NULL)
     {
         SDL_FreeSurface(map.background);
+    }
+
+    if ( jeu.fondMenuStart != NULL )
+    {
+        SDL_FreeSurface(jeu.fondMenuStart);
     }
 
     /* Libère l'image du tileset */
