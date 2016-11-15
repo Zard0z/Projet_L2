@@ -43,7 +43,19 @@
 #define LEFT 2
 
 // Constante définissant le seuil entre les tiles traversables (blank) et les tiles solides
-#define BLANK_TILE 5
+#define BLANK_TILE 10
+
+//Autres Tiles spéciales
+
+#define TILE_RESSORT 12
+#define TILE_CHECKPOINT 9
+#define TILE_MONSTRE 17
+
+#define TILE_POWER_UP_DEBUT 7
+#define TILE_POWER_UP_FIN 8
+
+#define TILE_PLATEFORME_DEBUT 15
+#define TILE_PLATEFORME_FIN 16
 
 ///Constantes définissant la gravité et la vitesse max de chute
 #define GRAVITY_SPEED 0.6

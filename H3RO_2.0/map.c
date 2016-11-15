@@ -138,7 +138,7 @@ void drawMap(void)
             if (map.tile[mapY][mapX] != 0)
             {
                 /*On teste si c'est une tile monstre (tile numéro 10) */
-                if (map.tile[mapY][mapX] == 10)
+                if (map.tile[mapY][mapX] == TILE_MONSTRE)
                 {
                     //On initialise un monstre en envoyant les coordonnées de la tile
                     initializeMonster(mapX * TILE_SIZE, mapY * TILE_SIZE);
@@ -181,10 +181,9 @@ void mapCollision(GameObject *entity)
     int i, x1, x2, y1, y2;
 
     /* D'abord, on place le joueur en l'air jusqu'à temps d'être sûr qu'il touche le sol */
-
     entity->onGround = 0;
 
-    // Ensuite, on va tester les mouvements horizontaux en premier (axe des X)
+    /* Ensuite, on va tester les mouvements horizontaux en premier (axe des X) */
     //On va se servir de i comme compteur pour notre boucle. En fait, on va découper notre sprite
     //en blocs de tiles pour voir quelles tiles il est susceptible de recouvrir.
     //On va donc commencer en donnant la valeur de Tile_Size à i pour qu'il teste la tile où se trouve
@@ -199,48 +198,47 @@ void mapCollision(GameObject *entity)
         i = entity->h;
 
     //On lance alors une boucle for infinie car on l'interrompra selon les résultats de nos calculs
-
     for (;;)
     {
-        //On va calculer ici les coins de notre sprite à gauche et à droite pour voir quelle tile ils touchent.
-
+        //On va calculer ici les coins de notre sprite à gauche et à droite pour voir quelle tile ils
+        //touchent.
         x1 = (entity->x + entity->dirX) / TILE_SIZE;
         x2 = (entity->x + entity->dirX + entity->w - 1) / TILE_SIZE;
 
         //Même chose avec y, sauf qu'on va monter au fur et à mesure pour tester toute la hauteur
         //de notre sprite, grâce à notre fameuse variable i.
-
         y1 = (entity->y) / TILE_SIZE;
         y2 = (entity->y + i - 1) / TILE_SIZE;
 
         //De là, on va tester les mouvements initiés dans updatePlayer grâce aux vecteurs
         //dirX et dirY, tout en testant avant qu'on se situe bien dans les limites de l'écran.
-
         if (x1 >= 0 && x2 < MAX_MAP_X && y1 >= 0 && y2 < MAX_MAP_Y)
         {
             //Si on a un mouvement à droite
-
             if (entity->dirX > 0)
             {
-                //Test de la tile Power-up : Etoile (= tile N°5)
-                if (map.tile[y1][x2] == 5)
+
+                //Test des tiles Power-up
+                if (map.tile[y1][x2] >= TILE_POWER_UP_DEBUT
+                    && map.tile[y1][x2] <= TILE_POWER_UP_FIN)
                 {
                     //On appelle la fonction getItem()
-                    getItem();
+                    getItem(map.tile[y1][x2] - TILE_POWER_UP_DEBUT + 1);
 
                     //On remplace la tile power-up par une tile transparente
                     map.tile[y1][x2] = 0;
                 }
-                else if(map.tile[y2][x2] == 5)
+                else if (map.tile[y2][x2] >= TILE_POWER_UP_DEBUT
+                    && map.tile[y2][x2] <= TILE_POWER_UP_FIN)
                 {
                     //On appelle la fonction getItem()
-                    getItem();
+                    getItem(map.tile[y2][x2] - TILE_POWER_UP_DEBUT + 1);
+
                     //On remplace la tile power-up par une tile transparente
                     map.tile[y2][x2] = 0;
                 }
 
                 //On vérifie si les tiles recouvertes sont solides
-
                 if (map.tile[y1][x2] > BLANK_TILE || map.tile[y2][x2] > BLANK_TILE)
                 {
                     // Si c'est le cas, on place le joueur aussi près que possible
@@ -248,9 +246,7 @@ void mapCollision(GameObject *entity)
                     //son vecteur déplacement (dirX).
 
                     entity->x = x2 * TILE_SIZE;
-
                     entity->x -= entity->w + 1;
-
                     entity->dirX = 0;
 
                 }
@@ -258,33 +254,35 @@ void mapCollision(GameObject *entity)
             }
 
             //Même chose à gauche
-
             else if (entity->dirX < 0)
             {
+
                 //Test de la tile Power-up : Etoile (= tile N°5)
-                if (map.tile[y1][x1] == 5)
+                if (map.tile[y1][x1] >= TILE_POWER_UP_DEBUT
+                    && map.tile[y1][x1] <= TILE_POWER_UP_FIN)
                 {
                     //On appelle la fonction getItem()
-                    getItem();
+                    getItem(map.tile[y1][x1] - TILE_POWER_UP_DEBUT + 1);
 
                     //On remplace la tile power-up par une tile transparente
                     map.tile[y1][x1] = 0;
                 }
-                else if(map.tile[y2][x1] == 5)
+                else if (map.tile[y2][x1] >= TILE_POWER_UP_DEBUT
+                    && map.tile[y2][x1] <= TILE_POWER_UP_FIN)
                 {
                     //On appelle la fonction getItem()
-                    getItem();
+                    getItem(map.tile[y2][x1] - TILE_POWER_UP_DEBUT + 1);
+
                     //On remplace la tile power-up par une tile transparente
                     map.tile[y2][x1] = 0;
                 }
+
+
                 if (map.tile[y1][x1] > BLANK_TILE || map.tile[y2][x1] > BLANK_TILE)
                 {
-
                     entity->x = (x1 + 1) * TILE_SIZE;
-
                     entity->dirX = 0;
                 }
-
 
             }
 
@@ -296,7 +294,7 @@ void mapCollision(GameObject *entity)
             break;
         }
 
-        //Sinon, on teste les tiles supérieures en se limitant à la hauteur du sprite.
+        //Sinon, on teste les tiles supérieures en se limitant à la heuteur du sprite.
         i += TILE_SIZE;
 
         if (i > entity->h)
@@ -328,31 +326,35 @@ void mapCollision(GameObject *entity)
                 /* Déplacement en bas */
 
                 //Test de la tile Power-up : Etoile (= tile N°5)
-                if (map.tile[y2][x1] == 5)
+                if (map.tile[y2][x1] >= TILE_POWER_UP_DEBUT
+                    && map.tile[y2][x1] <= TILE_POWER_UP_FIN)
                 {
                     //On appelle la fonction getItem()
-                    getItem();
+                    getItem(map.tile[y2][x1] - TILE_POWER_UP_DEBUT + 1);
 
                     //On remplace la tile power-up par une tile transparente
                     map.tile[y2][x1] = 0;
                 }
-                else if(map.tile[y2][x2] == 5)
+                else if (map.tile[y2][x2] >= TILE_POWER_UP_DEBUT
+                    && map.tile[y2][x2] <= TILE_POWER_UP_FIN)
                 {
                     //On appelle la fonction getItem()
-                    getItem();
+                    getItem(map.tile[y2][x2] - TILE_POWER_UP_DEBUT + 1);
+
                     //On remplace la tile power-up par une tile transparente
                     map.tile[y2][x2] = 0;
                 }
 
+
                 /* Gestion du ressort */
-                if ((map.tile[y2][x1] == 7 ) || (map.tile[y2][x2] == 7 ))
+                if ((map.tile[y2][x1] == TILE_RESSORT ) || (map.tile[y2][x2] == TILE_RESSORT ))
                 {
-                     //On met -20, pour lui faire faire un méga saut ;)
-                      entity->dirY = -20;
+                    entity->dirY = -20;
                     //On indique au jeu qu'il a atterri pour réinitialiser le double saut
                     entity->onGround = 1;
                     playSoundFx(BUMPER);
                 }
+
 
                 else if (map.tile[y2][x1] > BLANK_TILE || map.tile[y2][x2] > BLANK_TILE)
                 {
@@ -360,9 +362,7 @@ void mapCollision(GameObject *entity)
                     //on le déclare sur le sol (onGround).
                     entity->y = y2 * TILE_SIZE;
                     entity->y -= entity->h;
-
                     entity->dirY = 0;
-
                     entity->onGround = 1;
                 }
 
@@ -374,18 +374,21 @@ void mapCollision(GameObject *entity)
                 /* Déplacement vers le haut */
 
                 //Test de la tile Power-up : Etoile (= tile N°5)
-                if (map.tile[y1][x1] == 5)
+                if (map.tile[y1][x1] >= TILE_POWER_UP_DEBUT
+                    && map.tile[y1][x1] <= TILE_POWER_UP_FIN)
                 {
                     //On appelle la fonction getItem()
-                    getItem();
+                    getItem(map.tile[y1][x1] - TILE_POWER_UP_DEBUT + 1);
 
                     //On remplace la tile power-up par une tile transparente
                     map.tile[y1][x1] = 0;
                 }
-                else if(map.tile[y1][x2] == 5)
+                if (map.tile[y1][x2] >= TILE_POWER_UP_DEBUT
+                    && map.tile[y1][x2] <= TILE_POWER_UP_FIN)
                 {
                     //On appelle la fonction getItem()
-                    getItem();
+                    getItem(map.tile[y1][x2] - TILE_POWER_UP_DEBUT + 1);
+
                     //On remplace la tile power-up par une tile transparente
                     map.tile[y1][x2] = 0;
                 }
@@ -393,11 +396,8 @@ void mapCollision(GameObject *entity)
 
                 if (map.tile[y1][x1] > BLANK_TILE || map.tile[y1][x2] > BLANK_TILE)
                 {
-
                     entity->y = (y1 + 1) * TILE_SIZE;
-
                     entity->dirY = 0;
-
                 }
 
             }
@@ -431,7 +431,6 @@ void mapCollision(GameObject *entity)
     {
         //Si on touche le bord droit de l'écran, on passe au niveau sup
         jeu.level++;
-
         //Si on dépasse le niveau max, on annule et on limite le déplacement du joueur
         if(jeu.level > LEVEL_MAX)
         {
@@ -444,6 +443,7 @@ void mapCollision(GameObject *entity)
             changeLevel();
             initializePlayer();
         }
+
     }
 
     //Maintenant, s'il sort de l'écran par le bas (chute dans un trou sans fond), on lance le timer

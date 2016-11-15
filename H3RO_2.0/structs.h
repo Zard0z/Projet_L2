@@ -24,6 +24,9 @@ typedef struct GameObject
     //Sprite du héros (pas d'animation pour l'instant)
     SDL_Surface *sprite;
 
+    //Points de vie/santé
+    int life, invincibleTimer;
+
     /* Coordonnées du héros */
     int x, y;
 
@@ -53,7 +56,7 @@ typedef struct Gestion
     int level;
 
     //HUD
-    SDL_Surface *HUD_vie, *HUD_etoiles;
+    SDL_Surface *HUD_vie, *HUD_etoiles, *Shuriken_image;
     int vies, etoiles;
 
     //Sons

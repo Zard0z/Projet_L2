@@ -3,6 +3,11 @@
 
 void initializePlayer(void)
 {
+    //PV à 3
+    player.life = 3;
+
+    //Timer d'invincibilité à 0
+    player.invincibleTimer = 0;
 
     /* Charge le sprite de notre héros */
     changeAnimation(&player, "graphics/walkright.png");
@@ -36,6 +41,9 @@ void updatePlayer(void)
    //C'est pour ça qu'on ne gère le joueur que si ce timer vaut 0.
   if (player.timerMort == 0)
   {
+    //On gère le timer de l'invincibilité
+    if(player.invincibleTimer > 0)
+        player.invincibleTimer--;
 
     //On réinitialise notre vecteur de déplacement latéral (X), pour éviter que le perso
     //ne fonce de plus en plus vite pour atteindre la vitesse de la lumière ! ;)
@@ -75,7 +83,6 @@ void updatePlayer(void)
         {
             player.etat = WALK_RIGHT;
             changeAnimation(&player, "graphics/walkright.png");
-
         }
     }
 
@@ -140,7 +147,6 @@ void updatePlayer(void)
 
 
     //On gère l'anim du saut
-
     if(player.onGround == 0)
     {
         if(player.direction == RIGHT && player.etat != JUMP_RIGHT)
@@ -184,7 +190,6 @@ void updatePlayer(void)
             }
             initializePlayer();
             changeLevel();
-
         }
     }
 
@@ -222,16 +227,34 @@ void centerScrollingOnPlayer(void)
     }
 }
 
-void getItem(void)
+void getItem(int itemNumber)
 {
-    //On incrémente le compteur Etoile
-    jeu.etoiles++;
-    playSoundFx(STAR);
-
-    //On teste s'il y a 100 étoiles : on remet le compteur à 0 et on rajoute une vie ;)
-    if ( jeu.etoiles >= 100 )
+    switch(itemNumber)
     {
-        jeu.etoiles = 0;
-        jeu.vies++;
+        //Gestion des étoiles
+        case 1:
+        //On incrémente le compteur Etoile
+        jeu.etoiles++;
+        playSoundFx(STAR);
+
+        //On teste s'il y a 100 étoiles : on remet le compteur à 0 et on rajoute une vie ;)
+        if(jeu.etoiles >= 100)
+        {
+            jeu.etoiles = 0;
+            jeu.vies++;
+        }
+        break;
+
+        //Gestion des coeurs
+        case 2:
+        //On incrémente le compteur Etoile
+        if(player.life < 3)
+            player.life++;
+
+        playSoundFx(STAR);
+        break;
+
+        default:
+        break;
     }
 }

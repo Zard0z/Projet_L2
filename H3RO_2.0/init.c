@@ -104,6 +104,9 @@ void loadGame(void)
     jeu.HUD_vie = loadImage("graphics/life.png");
     jeu.HUD_etoiles = loadImage("graphics/stars.png");
 
+    //On charge le shuriken
+    jeu.Shuriken_image = loadImage("graphics/shuriken.png");
+
     //On charge la musique
     loadSong("music/Tezla - Music Is The Drug (Original Mix).mp3");
 
@@ -163,6 +166,12 @@ void cleanup()
     if (jeu.HUD_vie != NULL)
     {
         SDL_FreeSurface(jeu.HUD_vie);
+    }
+
+    //Libère le shuriken
+    if (jeu.Shuriken_image != NULL)
+    {
+        SDL_FreeSurface(jeu.Shuriken_image);
     }
 
     /* On libère la chanson */

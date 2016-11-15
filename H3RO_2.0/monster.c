@@ -49,14 +49,12 @@ void updateMonsters(void)
             monster[i].dirX = 0;
             monster[i].dirY += GRAVITY_SPEED;
 
-
             if (monster[i].dirY >= MAX_FALL_SPEED)
                 monster[i].dirY = MAX_FALL_SPEED;
 
-
-             //Test de collision dans un mur : si la variable x reste la même, deux tours de boucle
+            //Test de collision dans un mur : si la variable x reste la même, deux tours de boucle
             //durant, le monstre est bloqué et on lui fait faire demi-tour.
-             if (monster[i].x == monster[i].saveX || checkFall(monster[i]) == 1 )
+            if (monster[i].x == monster[i].saveX || checkFall(monster[i]) == 1 )
             {
                 if (monster[i].direction == LEFT)
                 {
@@ -86,12 +84,31 @@ void updateMonsters(void)
             monsterCollisionToMap(&monster[i]);
 
             //On détecte les collisions avec le joueur
-            //Si c'est égal à 1, on tue le joueur... Sniff...
+            //Si c'est égal à 1,  on diminue ses PV
             if (collide(&player, &monster[i]) == 1)
             {
-                //On met le timer à 1 pour tuer le joueur intantanément
-                player.timerMort = 1;
-                playSoundFx(DESTROY);
+                if(player.life > 1)
+                {
+                    //Si le timer d'invincibilité est à 0
+                    //on perd un coeur
+                    if(player.invincibleTimer == 0)
+                    {
+                        player.life--;
+                        player.invincibleTimer = 60;
+                        //On joue le son
+                        playSoundFx(DESTROY);
+                        //On met le timer à 1 pour tuer le monstre intantanément
+                        monster[i].timerMort = 1;
+                        player.dirY = -JUMP_HEIGHT;
+                    }
+                }
+                else
+                {
+                    //On met le timer à 1 pour tuer le joueur intantanément
+                    player.timerMort = 1;
+                    //On joue le son
+                    playSoundFx(DESTROY);
+                }
             }
             else if (collide(&player, &monster[i]) == 2)
             {
@@ -119,9 +136,7 @@ void updateMonsters(void)
                 jeu.nombreMonstres--;
             }
         }
-
     }
-
 }
 
 //Fonction de gestion des collisions
